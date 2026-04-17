@@ -5,7 +5,8 @@
 
 /* ========================================
    ORDEM DOS FRADES MENORES - DESIGN SYSTEM
-   Franciscan Design System: Earth, Nature, Spirit
+   Franciscan Design System: Brown Earth, Faith, Spirit
+   Cores Franciscanas Autênticas
    ======================================== */
 
 @theme inline {
@@ -18,18 +19,16 @@
   --font-serif: var(--font-playfair);
   --font-mono: var(--font-geist-mono);
   
-  /* Franciscan Palette */
-  --color-earth-areia: var(--earth-areia);
-  --color-earth-barro: var(--earth-barro);
-  --color-earth-terracota: var(--earth-terracota);
-  --color-nature-folhagem: var(--nature-folhagem);
-  --color-nature-musgo: var(--nature-musgo);
-  --color-nature-ceu: var(--nature-ceu);
-  --color-neutral-pedra: var(--neutral-pedra);
-  --color-neutral-cinza: var(--neutral-cinza);
-  --color-neutral-grafite: var(--neutral-grafite);
-  --color-special-dourado: var(--special-dourado);
-  --color-special-branco: var(--special-branco);
+  /* Franciscan Authentic Palette */
+  --color-franciscan-habit: var(--franciscan-habit);
+  --color-franciscan-cord: var(--franciscan-cord);
+  --color-franciscan-tau: var(--franciscan-tau);
+  --color-franciscan-earth: var(--franciscan-earth);
+  --color-franciscan-clay: var(--franciscan-clay);
+  --color-franciscan-sand: var(--franciscan-sand);
+  --color-franciscan-stone: var(--franciscan-stone);
+  --color-franciscan-parchment: var(--franciscan-parchment);
+  --color-franciscan-cream: var(--franciscan-cream);
   
   /* Component Colors */
   --color-card: var(--card);
@@ -78,124 +77,121 @@
   --radius: 0.5rem;
   
   /* ========================================
-     FRANCISCAN COLOR PALETTE
+     FRANCISCAN AUTHENTIC COLOR PALETTE
+     Cores do Hábito Franciscano
      ======================================== */
   
-  /* Earth Tones - Grounding, warmth, simplicity */
-  --earth-areia: #F5F1E8;       /* Warm sand - primary background */
-  --earth-barro: #E8DFD0;       /* Clay - secondary backgrounds */
-  --earth-terracota: #C17F59;   /* Terracotta - warm accent */
+  /* Franciscan Habit Colors - Marrom do hábito */
+  --franciscan-habit: #6B4423;        /* Habit brown - primary */
+  --franciscan-cord: #C4A35A;         /* Cord color - golden rope */
+  --franciscan-tau: #8B6914;          /* Tau cross - deep gold */
   
-  /* Nature Tones - Life, growth, creation */
-  --nature-folhagem: #5A6F52;   /* Sage green - primary brand color */
-  --nature-musgo: #3D4A35;      /* Dark moss - text emphasis */
-  --nature-ceu: #B8C5D0;        /* Soft sky - subtle accents */
+  /* Earth Tones - Tons da terra */
+  --franciscan-earth: #4A3728;        /* Deep earth brown */
+  --franciscan-clay: #8B5A2B;         /* Clay terracotta */
+  --franciscan-sand: #D4C4A8;         /* Sand beige */
+  --franciscan-stone: #5C5347;        /* Stone gray-brown */
   
-  /* Neutral Tones - Balance, clarity */
-  --neutral-pedra: #9A9383;     /* Stone - secondary text */
-  --neutral-cinza: #6B6560;     /* Gray - body text */
-  --neutral-grafite: #2C2825;   /* Graphite - headings */
-  
-  /* Special Accents */
-  --special-dourado: #C9A962;   /* Golden - Tau franciscan accent */
-  --special-branco: #FDFCF9;    /* Pure white - cards, contrast */
+  /* Background Tones */
+  --franciscan-parchment: #F5F0E6;    /* Parchment paper */
+  --franciscan-cream: #FAF7F0;        /* Cream white */
   
   /* ========================================
-     COMPONENT MAPPING
+     COMPONENT MAPPING - Cores Franciscanas
      ======================================== */
   
-  --background: var(--earth-areia);
-  --foreground: var(--neutral-grafite);
+  --background: var(--franciscan-parchment);
+  --foreground: var(--franciscan-earth);
   
-  --card: var(--special-branco);
-  --card-foreground: var(--neutral-grafite);
+  --card: var(--franciscan-cream);
+  --card-foreground: var(--franciscan-earth);
   
-  --popover: var(--special-branco);
-  --popover-foreground: var(--neutral-grafite);
+  --popover: var(--franciscan-cream);
+  --popover-foreground: var(--franciscan-earth);
   
-  --primary: var(--nature-folhagem);
-  --primary-foreground: var(--special-branco);
+  --primary: var(--franciscan-habit);
+  --primary-foreground: var(--franciscan-cream);
   
-  --secondary: var(--earth-barro);
-  --secondary-foreground: var(--neutral-grafite);
+  --secondary: var(--franciscan-sand);
+  --secondary-foreground: var(--franciscan-earth);
   
-  --muted: var(--earth-barro);
-  --muted-foreground: var(--neutral-pedra);
+  --muted: var(--franciscan-sand);
+  --muted-foreground: var(--franciscan-stone);
   
-  --accent: var(--earth-terracota);
-  --accent-foreground: var(--special-branco);
+  --accent: var(--franciscan-clay);
+  --accent-foreground: var(--franciscan-cream);
   
-  --destructive: #B91C1C;
+  --destructive: #9B2C2C;
   
-  --border: var(--earth-barro);
-  --input: var(--earth-barro);
-  --ring: var(--nature-folhagem);
+  --border: var(--franciscan-sand);
+  --input: var(--franciscan-sand);
+  --ring: var(--franciscan-habit);
   
   /* Chart colors derived from palette */
-  --chart-1: var(--nature-folhagem);
-  --chart-2: var(--earth-terracota);
-  --chart-3: var(--nature-ceu);
-  --chart-4: var(--special-dourado);
-  --chart-5: var(--nature-musgo);
+  --chart-1: var(--franciscan-habit);
+  --chart-2: var(--franciscan-clay);
+  --chart-3: var(--franciscan-cord);
+  --chart-4: var(--franciscan-tau);
+  --chart-5: var(--franciscan-stone);
   
   /* Sidebar */
-  --sidebar: var(--special-branco);
-  --sidebar-foreground: var(--neutral-grafite);
-  --sidebar-primary: var(--nature-folhagem);
-  --sidebar-primary-foreground: var(--special-branco);
-  --sidebar-accent: var(--earth-barro);
-  --sidebar-accent-foreground: var(--neutral-grafite);
-  --sidebar-border: var(--earth-barro);
-  --sidebar-ring: var(--nature-folhagem);
+  --sidebar: var(--franciscan-cream);
+  --sidebar-foreground: var(--franciscan-earth);
+  --sidebar-primary: var(--franciscan-habit);
+  --sidebar-primary-foreground: var(--franciscan-cream);
+  --sidebar-accent: var(--franciscan-sand);
+  --sidebar-accent-foreground: var(--franciscan-earth);
+  --sidebar-border: var(--franciscan-sand);
+  --sidebar-ring: var(--franciscan-habit);
 }
 
 /* Dark mode - keeping Franciscan warmth */
 .dark {
-  --background: #1A1918;
-  --foreground: var(--earth-areia);
+  --background: #2A2118;
+  --foreground: var(--franciscan-parchment);
   
-  --card: #252321;
-  --card-foreground: var(--earth-areia);
+  --card: #362A20;
+  --card-foreground: var(--franciscan-parchment);
   
-  --popover: #252321;
-  --popover-foreground: var(--earth-areia);
+  --popover: #362A20;
+  --popover-foreground: var(--franciscan-parchment);
   
-  --primary: #7A916F;           /* Lighter sage for dark mode */
-  --primary-foreground: #1A1918;
+  --primary: #C4A35A;           /* Golden cord for dark mode */
+  --primary-foreground: #2A2118;
   
-  --secondary: #2E2B28;
-  --secondary-foreground: var(--earth-areia);
+  --secondary: #4A3D30;
+  --secondary-foreground: var(--franciscan-parchment);
   
-  --muted: #2E2B28;
-  --muted-foreground: var(--neutral-pedra);
+  --muted: #4A3D30;
+  --muted-foreground: #A89B8C;
   
-  --accent: #D4956F;            /* Lighter terracotta */
-  --accent-foreground: #1A1918;
+  --accent: #A66F3D;            /* Lighter terracotta */
+  --accent-foreground: var(--franciscan-parchment);
   
-  --destructive: #DC2626;
+  --destructive: #C53030;
   
-  --border: #3D3A36;
-  --input: #3D3A36;
-  --ring: #7A916F;
+  --border: #4A3D30;
+  --input: #4A3D30;
+  --ring: #C4A35A;
   
-  --chart-1: #7A916F;
-  --chart-2: #D4956F;
-  --chart-3: #9BADBC;
-  --chart-4: #D4B978;
-  --chart-5: #5A6F52;
+  --chart-1: #C4A35A;
+  --chart-2: #A66F3D;
+  --chart-3: #8B6914;
+  --chart-4: #D4B86A;
+  --chart-5: #8B7355;
   
-  --sidebar: #252321;
-  --sidebar-foreground: var(--earth-areia);
-  --sidebar-primary: #7A916F;
-  --sidebar-primary-foreground: #1A1918;
-  --sidebar-accent: #2E2B28;
-  --sidebar-accent-foreground: var(--earth-areia);
-  --sidebar-border: #3D3A36;
-  --sidebar-ring: #7A916F;
+  --sidebar: #362A20;
+  --sidebar-foreground: var(--franciscan-parchment);
+  --sidebar-primary: #C4A35A;
+  --sidebar-primary-foreground: #2A2118;
+  --sidebar-accent: #4A3D30;
+  --sidebar-accent-foreground: var(--franciscan-parchment);
+  --sidebar-border: #4A3D30;
+  --sidebar-ring: #C4A35A;
 }
 
 /* ========================================
-   BASE STYLES
+   BASE STYLES - BOLD TYPOGRAPHY
    ======================================== */
 
 @layer base {
@@ -208,38 +204,50 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
   }
   
-  /* Typography scale */
+  /* Typography scale - BOLD */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-playfair), Georgia, serif;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
-    color: var(--neutral-grafite);
+    color: var(--franciscan-habit);
   }
   
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
     letter-spacing: -0.02em;
+    font-weight: 700;
   }
   
   h2 {
     @apply text-3xl md:text-4xl;
     letter-spacing: -0.01em;
+    font-weight: 700;
   }
   
   h3 {
     @apply text-2xl md:text-3xl;
+    font-weight: 700;
   }
   
   h4 {
     @apply text-xl md:text-2xl;
+    font-weight: 700;
   }
   
   p {
     @apply text-base md:text-lg;
     line-height: 1.7;
-    color: var(--neutral-cinza);
+    color: var(--franciscan-earth);
+    font-weight: 500;
+  }
+  
+  /* Strong and bold text */
+  strong, b {
+    font-weight: 700;
+    color: var(--franciscan-habit);
   }
   
   /* Smooth scrolling */
@@ -249,8 +257,8 @@
   
   /* Selection */
   ::selection {
-    background: var(--nature-folhagem);
-    color: var(--special-branco);
+    background: var(--franciscan-habit);
+    color: var(--franciscan-cream);
   }
 }
 
@@ -285,9 +293,39 @@
   .tau-accent::before {
     content: "τ";
     font-family: Georgia, serif;
-    color: var(--special-dourado);
+    color: var(--franciscan-cord);
     margin-right: 0.5rem;
     font-size: 1.2em;
+    font-weight: 700;
+  }
+  
+  /* Franciscan colors utilities */
+  .text-franciscan-habit {
+    color: var(--franciscan-habit);
+  }
+  
+  .text-franciscan-cord {
+    color: var(--franciscan-cord);
+  }
+  
+  .text-franciscan-tau {
+    color: var(--franciscan-tau);
+  }
+  
+  .bg-franciscan-habit {
+    background-color: var(--franciscan-habit);
+  }
+  
+  .bg-franciscan-cord {
+    background-color: var(--franciscan-cord);
+  }
+  
+  .bg-franciscan-cream {
+    background-color: var(--franciscan-cream);
+  }
+  
+  .border-franciscan {
+    border-color: var(--franciscan-sand);
   }
 }
 
@@ -320,21 +358,21 @@
    ======================================== */
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--earth-barro);
+  background: var(--franciscan-sand);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--nature-folhagem);
-  border-radius: 4px;
+  background: var(--franciscan-habit);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--nature-musgo);
+  background: var(--franciscan-earth);
 }
 
 /* ========================================
@@ -342,7 +380,7 @@
    ======================================== */
 
 :focus-visible {
-  outline: 2px solid var(--nature-folhagem);
+  outline: 3px solid var(--franciscan-cord);
   outline-offset: 2px;
 }
 

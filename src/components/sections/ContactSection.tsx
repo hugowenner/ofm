@@ -23,7 +23,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contato" className="section-padding bg-[var(--special-branco)]">
+    <section id="contato" className="section-padding bg-[var(--franciscan-cream)]">
       <div className="container-franciscan" ref={ref}>
         {/* Header */}
         <motion.div
@@ -32,13 +32,13 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif text-[var(--neutral-grafite)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--franciscan-habit)] mb-4">
             {contactContent.title}
           </h2>
-          <p className="text-lg text-[var(--nature-folhagem)] font-medium mb-6">
+          <p className="text-xl font-bold text-[var(--franciscan-clay)] mb-6">
             {contactContent.subtitle}
           </p>
-          <p className="text-lg text-[var(--neutral-cinza)] leading-relaxed">
+          <p className="text-lg font-medium text-[var(--franciscan-earth)] leading-relaxed">
             {contactContent.description}
           </p>
         </motion.div>
@@ -52,15 +52,15 @@ export function ContactSection() {
           >
             <div className="space-y-6">
               {/* Address */}
-              <div className="flex gap-4 p-6 rounded-xl bg-[var(--earth-areia)]">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[var(--nature-folhagem)]/10 flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-[var(--nature-folhagem)]" />
+              <div className="flex gap-4 p-6 rounded-xl bg-[var(--franciscan-parchment)] border-2 border-[var(--franciscan-sand)]">
+                <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-[var(--franciscan-habit)] flex items-center justify-center">
+                  <MapPin className="w-7 h-7 text-[var(--franciscan-cream)]" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg text-[var(--neutral-grafite)] mb-2">
+                  <h3 className="font-serif text-lg font-bold text-[var(--franciscan-habit)] mb-2">
                     Endereço
                   </h3>
-                  <p className="text-[var(--neutral-cinza)] leading-relaxed">
+                  <p className="text-base font-medium text-[var(--franciscan-earth)] leading-relaxed">
                     {contactContent.address.street}
                     <br />
                     {contactContent.address.neighborhood}
@@ -73,21 +73,21 @@ export function ContactSection() {
               </div>
 
               {/* Phones */}
-              <div className="flex gap-4 p-6 rounded-xl bg-[var(--earth-areia)]">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[var(--nature-folhagem)]/10 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-[var(--nature-folhagem)]" />
+              <div className="flex gap-4 p-6 rounded-xl bg-[var(--franciscan-parchment)] border-2 border-[var(--franciscan-sand)]">
+                <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-[var(--franciscan-habit)] flex items-center justify-center">
+                  <Phone className="w-7 h-7 text-[var(--franciscan-cream)]" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg text-[var(--neutral-grafite)] mb-2">
+                  <h3 className="font-serif text-lg font-bold text-[var(--franciscan-habit)] mb-2">
                     Telefones
                   </h3>
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     {contactContent.phones.map((phone) => (
-                      <p key={phone.label} className="text-[var(--neutral-cinza)]">
-                        <span className="text-[var(--neutral-pedra)]">{phone.label}:</span>{" "}
+                      <p key={phone.label} className="text-base font-medium text-[var(--franciscan-earth)]">
+                        <span className="font-bold text-[var(--franciscan-stone)]">{phone.label}:</span>{" "}
                         <a
                           href={`tel:${phone.number.replace(/\D/g, "")}`}
-                          className="hover:text-[var(--nature-folhagem)] transition-colors"
+                          className="font-bold text-[var(--franciscan-clay)] hover:text-[var(--franciscan-habit)] transition-colors"
                         >
                           {phone.number}
                         </a>
@@ -98,17 +98,17 @@ export function ContactSection() {
               </div>
 
               {/* Email */}
-              <div className="flex gap-4 p-6 rounded-xl bg-[var(--earth-areia)]">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[var(--nature-folhagem)]/10 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-[var(--nature-folhagem)]" />
+              <div className="flex gap-4 p-6 rounded-xl bg-[var(--franciscan-parchment)] border-2 border-[var(--franciscan-sand)]">
+                <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-[var(--franciscan-habit)] flex items-center justify-center">
+                  <Mail className="w-7 h-7 text-[var(--franciscan-cream)]" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg text-[var(--neutral-grafite)] mb-2">
+                  <h3 className="font-serif text-lg font-bold text-[var(--franciscan-habit)] mb-2">
                     E-mail
                   </h3>
                   <a
                     href={`mailto:${contactContent.email}`}
-                    className="text-[var(--nature-folhagem)] hover:underline"
+                    className="text-base font-bold text-[var(--franciscan-clay)] hover:text-[var(--franciscan-habit)] transition-colors"
                   >
                     {contactContent.email}
                   </a>
@@ -116,15 +116,15 @@ export function ContactSection() {
               </div>
 
               {/* Hours */}
-              <div className="flex gap-4 p-6 rounded-xl bg-[var(--earth-areia)]">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[var(--nature-folhagem)]/10 flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-[var(--nature-folhagem)]" />
+              <div className="flex gap-4 p-6 rounded-xl bg-[var(--franciscan-parchment)] border-2 border-[var(--franciscan-sand)]">
+                <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-[var(--franciscan-habit)] flex items-center justify-center">
+                  <Clock className="w-7 h-7 text-[var(--franciscan-cream)]" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg text-[var(--neutral-grafite)] mb-2">
+                  <h3 className="font-serif text-lg font-bold text-[var(--franciscan-habit)] mb-2">
                     Horário de Atendimento
                   </h3>
-                  <p className="text-[var(--neutral-cinza)]">
+                  <p className="text-base font-medium text-[var(--franciscan-earth)]">
                     Segunda a sexta: {contactContent.hours.weekdays}
                     <br />
                     Sábados: {contactContent.hours.weekend}
@@ -140,30 +140,30 @@ export function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="p-8 rounded-2xl bg-[var(--earth-areia)] border border-[var(--earth-barro)]">
-              <h3 className="font-serif text-2xl text-[var(--neutral-grafite)] mb-6">
+            <div className="p-8 rounded-2xl bg-[var(--franciscan-parchment)] border-2 border-[var(--franciscan-sand)]">
+              <h3 className="font-serif text-2xl font-bold text-[var(--franciscan-habit)] mb-6">
                 Envie uma mensagem
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-[var(--neutral-cinza)] mb-1"
+                      className="block text-sm font-bold text-[var(--franciscan-habit)] mb-2"
                     >
                       Nome
                     </label>
                     <Input
                       id="name"
                       placeholder="Seu nome"
-                      className="bg-[var(--special-branco)] border-[var(--earth-barro)] focus:border-[var(--nature-folhagem)]"
+                      className="bg-[var(--franciscan-cream)] border-2 border-[var(--franciscan-sand)] focus:border-[var(--franciscan-habit)] font-medium"
                       required
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-[var(--neutral-cinza)] mb-1"
+                      className="block text-sm font-bold text-[var(--franciscan-habit)] mb-2"
                     >
                       E-mail
                     </label>
@@ -171,7 +171,7 @@ export function ContactSection() {
                       id="email"
                       type="email"
                       placeholder="seu@email.com"
-                      className="bg-[var(--special-branco)] border-[var(--earth-barro)] focus:border-[var(--nature-folhagem)]"
+                      className="bg-[var(--franciscan-cream)] border-2 border-[var(--franciscan-sand)] focus:border-[var(--franciscan-habit)] font-medium"
                       required
                     />
                   </div>
@@ -179,21 +179,21 @@ export function ContactSection() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-[var(--neutral-cinza)] mb-1"
+                    className="block text-sm font-bold text-[var(--franciscan-habit)] mb-2"
                   >
                     Assunto
                   </label>
                   <Input
                     id="subject"
                     placeholder="Como podemos ajudar?"
-                    className="bg-[var(--special-branco)] border-[var(--earth-barro)] focus:border-[var(--nature-folhagem)]"
+                    className="bg-[var(--franciscan-cream)] border-2 border-[var(--franciscan-sand)] focus:border-[var(--franciscan-habit)] font-medium"
                     required
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-[var(--neutral-cinza)] mb-1"
+                    className="block text-sm font-bold text-[var(--franciscan-habit)] mb-2"
                   >
                     Mensagem
                   </label>
@@ -201,21 +201,21 @@ export function ContactSection() {
                     id="message"
                     placeholder="Escreva sua mensagem..."
                     rows={5}
-                    className="bg-[var(--special-branco)] border-[var(--earth-barro)] focus:border-[var(--nature-folhagem)] resize-none"
+                    className="bg-[var(--franciscan-cream)] border-2 border-[var(--franciscan-sand)] focus:border-[var(--franciscan-habit)] resize-none font-medium"
                     required
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[var(--nature-folhagem)] hover:bg-[var(--nature-musgo)] text-[var(--special-branco)]"
+                  className="w-full bg-[var(--franciscan-habit)] hover:bg-[var(--franciscan-earth)] text-[var(--franciscan-cream)] font-bold text-lg py-6"
                 >
                   {isSubmitting ? (
                     "Enviando..."
                   ) : (
                     <>
                       Enviar mensagem
-                      <Send className="w-4 h-4 ml-2" />
+                      <Send className="w-5 h-5 ml-2" />
                     </>
                   )}
                 </Button>

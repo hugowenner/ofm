@@ -18,7 +18,7 @@ export function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="quem-somos" className="section-padding bg-[var(--special-branco)]">
+    <section id="quem-somos" className="section-padding bg-[var(--franciscan-cream)]">
       <div className="container-franciscan" ref={ref}>
         {/* Header */}
         <motion.div
@@ -27,13 +27,13 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif text-[var(--neutral-grafite)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--franciscan-habit)] mb-4">
             {aboutContent.title}
           </h2>
-          <p className="text-lg text-[var(--nature-folhagem)] font-medium mb-6">
+          <p className="text-xl font-bold text-[var(--franciscan-clay)] mb-6">
             {aboutContent.subtitle}
           </p>
-          <p className="text-lg text-[var(--neutral-cinza)] leading-relaxed">
+          <p className="text-lg font-medium text-[var(--franciscan-earth)] leading-relaxed">
             {aboutContent.description}
           </p>
         </motion.div>
@@ -48,17 +48,17 @@ export function AboutSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group p-8 rounded-2xl bg-[var(--earth-areia)] hover:bg-[var(--earth-barro)]/30 transition-colors duration-300"
+                className="group p-8 rounded-2xl bg-[var(--franciscan-parchment)] border-2 border-[var(--franciscan-sand)] hover:border-[var(--franciscan-habit)] hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[var(--nature-folhagem)]/10 flex items-center justify-center group-hover:bg-[var(--nature-folhagem)]/20 transition-colors">
-                    <IconComponent className="w-6 h-6 text-[var(--nature-folhagem)]" />
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[var(--franciscan-habit)] flex items-center justify-center">
+                    <IconComponent className="w-7 h-7 text-[var(--franciscan-cream)]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-serif text-[var(--neutral-grafite)] mb-3">
+                    <h3 className="text-xl font-serif font-bold text-[var(--franciscan-habit)] mb-3">
                       {pillar.title}
                     </h3>
-                    <p className="text-[var(--neutral-cinza)] leading-relaxed">
+                    <p className="text-base font-medium text-[var(--franciscan-earth)] leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>
@@ -75,15 +75,15 @@ export function AboutSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
         >
-          {aboutContent.stats.map((stat, index) => (
+          {aboutContent.stats.map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-6 rounded-xl border border-[var(--earth-barro)] bg-[var(--special-branco)]"
+              className="text-center p-6 rounded-xl border-2 border-[var(--franciscan-sand)] bg-[var(--franciscan-cream)]"
             >
-              <div className="text-3xl md:text-4xl font-serif text-[var(--nature-folhagem)] mb-2">
+              <div className="text-3xl md:text-4xl font-serif font-bold text-[var(--franciscan-habit)] mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm text-[var(--neutral-pedra)]">
+              <div className="text-sm font-bold text-[var(--franciscan-stone)]">
                 {stat.label}
               </div>
             </div>

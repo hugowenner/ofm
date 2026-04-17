@@ -12,7 +12,7 @@ export function PresenceSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="presencas" className="section-padding bg-[var(--special-branco)]">
+    <section id="presencas" className="section-padding bg-[var(--franciscan-cream)]">
       <div className="container-franciscan" ref={ref}>
         {/* Header */}
         <motion.div
@@ -21,13 +21,13 @@ export function PresenceSection() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif text-[var(--neutral-grafite)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--franciscan-habit)] mb-4">
             {presenceContent.title}
           </h2>
-          <p className="text-lg text-[var(--nature-folhagem)] font-medium mb-6">
+          <p className="text-xl font-bold text-[var(--franciscan-clay)] mb-6">
             {presenceContent.subtitle}
           </p>
-          <p className="text-lg text-[var(--neutral-cinza)] leading-relaxed">
+          <p className="text-lg font-medium text-[var(--franciscan-earth)] leading-relaxed">
             {presenceContent.description}
           </p>
         </motion.div>
@@ -42,33 +42,33 @@ export function PresenceSection() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className={`group relative p-6 rounded-xl border transition-all duration-300 cursor-pointer ${
+              className={`group relative p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
                 hoveredIndex === index
-                  ? "border-[var(--nature-folhagem)] bg-[var(--nature-folhagem)]/5 shadow-lg"
-                  : "border-[var(--earth-barro)] bg-[var(--earth-areia)] hover:border-[var(--nature-folhagem)]/50"
+                  ? "border-[var(--franciscan-habit)] bg-[var(--franciscan-habit)]/5 shadow-lg"
+                  : "border-[var(--franciscan-sand)] bg-[var(--franciscan-parchment)] hover:border-[var(--franciscan-clay)]"
               }`}
             >
               {/* Location Icon */}
               <div className="flex items-start gap-4">
                 <div
-                  className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
+                  className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${
                     hoveredIndex === index
-                      ? "bg-[var(--nature-folhagem)] text-[var(--special-branco)]"
-                      : "bg-[var(--earth-barro)] text-[var(--nature-folhagem)]"
+                      ? "bg-[var(--franciscan-habit)] text-[var(--franciscan-cream)]"
+                      : "bg-[var(--franciscan-sand)] text-[var(--franciscan-habit)]"
                   }`}
                 >
-                  <MapPin className="w-5 h-5" />
+                  <MapPin className="w-6 h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-serif text-lg text-[var(--neutral-grafite)] mb-1">
+                  <h3 className="font-serif text-lg font-bold text-[var(--franciscan-habit)] mb-1">
                     {location.city}
                   </h3>
-                  <p className="text-sm text-[var(--nature-folhagem)] font-medium mb-2">
+                  <p className="text-sm font-bold text-[var(--franciscan-clay)] mb-2">
                     {location.state} · {location.type}
                   </p>
                   <p
-                    className={`text-sm text-[var(--neutral-cinza)] leading-relaxed transition-all duration-300 ${
-                      hoveredIndex === index ? "opacity-100 max-h-24" : "opacity-70 max-h-12"
+                    className={`text-sm font-medium text-[var(--franciscan-earth)] leading-relaxed transition-all duration-300 ${
+                      hoveredIndex === index ? "opacity-100" : "opacity-70"
                     }`}
                   >
                     {location.description}
@@ -79,7 +79,7 @@ export function PresenceSection() {
               {/* Decorative corner */}
               <div
                 className={`absolute top-0 right-0 w-16 h-16 rounded-bl-full transition-colors ${
-                  hoveredIndex === index ? "bg-[var(--nature-folhagem)]/10" : "bg-transparent"
+                  hoveredIndex === index ? "bg-[var(--franciscan-cord)]/20" : "bg-transparent"
                 }`}
               />
             </motion.div>
@@ -91,11 +91,11 @@ export function PresenceSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 p-8 rounded-2xl bg-[var(--earth-barro)]/30 text-center"
+          className="mt-12 p-8 rounded-2xl bg-[var(--franciscan-sand)]/50 border-2 border-[var(--franciscan-sand)] text-center"
         >
-          <div className="flex items-center justify-center gap-2 text-[var(--neutral-pedra)]">
-            <MapPin className="w-5 h-5" />
-            <span className="text-sm">
+          <div className="flex items-center justify-center gap-2 text-[var(--franciscan-habit)]">
+            <MapPin className="w-6 h-6" />
+            <span className="font-bold">
               Visualize todas as nossas comunidades no mapa interativo (em breve)
             </span>
           </div>

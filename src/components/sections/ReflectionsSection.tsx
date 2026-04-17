@@ -22,7 +22,7 @@ export function ReflectionsSection() {
   };
 
   return (
-    <section id="reflexoes" className="section-padding bg-[var(--earth-areia)]">
+    <section id="reflexoes" className="section-padding bg-[var(--franciscan-parchment)]">
       <div className="container-franciscan" ref={ref}>
         {/* Header */}
         <motion.div
@@ -31,13 +31,13 @@ export function ReflectionsSection() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif text-[var(--neutral-grafite)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--franciscan-habit)] mb-4">
             {reflectionsContent.title}
           </h2>
-          <p className="text-lg text-[var(--nature-folhagem)] font-medium mb-6">
+          <p className="text-xl font-bold text-[var(--franciscan-clay)] mb-6">
             {reflectionsContent.subtitle}
           </p>
-          <p className="text-lg text-[var(--neutral-cinza)] leading-relaxed">
+          <p className="text-lg font-medium text-[var(--franciscan-earth)] leading-relaxed">
             {reflectionsContent.description}
           </p>
         </motion.div>
@@ -53,31 +53,31 @@ export function ReflectionsSection() {
               className="group flex flex-col"
             >
               {/* Post Card */}
-              <div className="flex-1 p-6 rounded-2xl bg-[var(--special-branco)] border border-[var(--earth-barro)] hover:border-[var(--nature-folhagem)]/50 transition-colors">
+              <div className="flex-1 p-6 rounded-2xl bg-[var(--franciscan-cream)] border-2 border-[var(--franciscan-sand)] hover:border-[var(--franciscan-habit)] hover:shadow-lg transition-all">
                 {/* Category */}
-                <span className="inline-block px-3 py-1 text-xs font-medium text-[var(--nature-folhagem)] bg-[var(--nature-folhagem)]/10 rounded-full mb-4">
+                <span className="inline-block px-4 py-1 text-sm font-bold text-[var(--franciscan-cream)] bg-[var(--franciscan-habit)] rounded-full mb-4">
                   {post.category}
                 </span>
 
                 {/* Title */}
-                <h3 className="text-xl font-serif text-[var(--neutral-grafite)] mb-3 group-hover:text-[var(--nature-folhagem)] transition-colors">
+                <h3 className="text-xl font-serif font-bold text-[var(--franciscan-habit)] mb-3 group-hover:text-[var(--franciscan-clay)] transition-colors">
                   <Link href="#" className="hover:underline">
                     {post.title}
                   </Link>
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-[var(--neutral-cinza)] leading-relaxed mb-4 flex-1">
+                <p className="text-base font-medium text-[var(--franciscan-earth)] leading-relaxed mb-4 flex-1">
                   {post.excerpt}
                 </p>
 
                 {/* Meta */}
-                <div className="flex items-center justify-between pt-4 border-t border-[var(--earth-barro)]">
-                  <span className="text-sm text-[var(--neutral-pedra)]">
+                <div className="flex items-center justify-between pt-4 border-t-2 border-[var(--franciscan-sand)]">
+                  <span className="text-sm font-bold text-[var(--franciscan-habit)]">
                     {post.author}
                   </span>
-                  <div className="flex items-center gap-1 text-xs text-[var(--neutral-pedra)]">
-                    <Calendar className="w-3 h-3" />
+                  <div className="flex items-center gap-1 text-sm font-medium text-[var(--franciscan-stone)]">
+                    <Calendar className="w-4 h-4" />
                     <span>{formatDate(post.date)}</span>
                   </div>
                 </div>
@@ -95,12 +95,12 @@ export function ReflectionsSection() {
         >
           <Button
             asChild
-            variant="outline"
-            className="border-[var(--nature-folhagem)] text-[var(--nature-folhagem)] hover:bg-[var(--nature-folhagem)] hover:text-[var(--special-branco)]"
+            size="lg"
+            className="bg-[var(--franciscan-habit)] hover:bg-[var(--franciscan-earth)] text-[var(--franciscan-cream)] font-bold"
           >
             <Link href="#reflexoes">
               Ver todas as reflexões
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </Button>
         </motion.div>
