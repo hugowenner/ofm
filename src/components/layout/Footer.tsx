@@ -1,79 +1,45 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Youtube, Facebook, Mail, Phone, MapPin } from "lucide-react";
-import { footerContent, contactContent, siteConfig } from "@/content/mockData";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { contactContent } from "@/content/mockData";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const quickLinks = [
+    { name: "A Província", href: "#provincia-santa-cruz" },
+    { name: "Vocações", href: "#vocacao" },
+    { name: "Vida e Missão", href: "#vida-e-missao" },
+    { name: "Reflexões", href: "#reflexoes" },
+    { name: "Contato", href: "#fale-conosco" },
+  ];
 
   return (
-    <footer className="bg-[var(--franciscan-habit)] text-[var(--franciscan-cream)]">
-      {/* Main Footer */}
-      <div className="container-franciscan section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
-          {/* Brand Column */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 rounded-full bg-[var(--franciscan-cream)] flex items-center justify-center">
-                <span className="text-4xl font-serif font-bold text-[var(--franciscan-cord)]">τ</span>
-              </div>
+    <footer className="bg-[#5A3E2B] text-white">
+      <div className="container-franciscan py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 text-2xl font-serif font-bold">
+                τ
+              </span>
               <div>
-                <h3 className="font-serif text-xl font-bold text-[var(--franciscan-cream)]">
-                  {siteConfig.name}
-                </h3>
-                <p className="text-sm font-semibold text-[var(--franciscan-sand)]">
-                  {siteConfig.province}
+                <h3 className="font-serif text-lg font-bold leading-tight">Frades Menores</h3>
+                <p className="text-xs uppercase tracking-[0.12em] text-white/75 font-semibold">
+                  Província Santa Cruz
                 </p>
               </div>
             </div>
-            <p className="text-base font-medium text-[var(--franciscan-sand)] leading-relaxed mb-6">
-              {footerContent.description}
+            <p className="max-w-[34ch] text-white/75 leading-relaxed">
+              Presença franciscana no Brasil, vivida na simplicidade, fraternidade e serviço.
             </p>
-            {/* Social Links */}
-            <div className="flex gap-4">
-              <a
-                href="https://instagram.com/vocacaofranciscanaofm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[var(--franciscan-earth)]/80 flex items-center justify-center hover:bg-[var(--franciscan-cord)] transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-6 h-6" />
-              </a>
-              <a
-                href="https://youtube.com/c/EscolaFranciscanadeTeologia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[var(--franciscan-earth)]/80 flex items-center justify-center hover:bg-[var(--franciscan-cord)] transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-6 h-6" />
-              </a>
-              <a
-                href="https://facebook.com/franciscanosPSC"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[var(--franciscan-earth)]/80 flex items-center justify-center hover:bg-[var(--franciscan-cord)] transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-6 h-6" />
-              </a>
-            </div>
           </div>
 
-          {/* Links Columns */}
           <div>
-            <h4 className="font-serif text-lg font-bold mb-4 text-[var(--franciscan-cord)]">
-              Sobre Nós
-            </h4>
-            <ul className="space-y-3">
-              {footerContent.links.about.map((link) => (
+            <h4 className="font-semibold text-white mb-3">Explorar</h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-base font-medium text-[var(--franciscan-sand)] hover:text-[var(--franciscan-cord)] transition-colors"
-                  >
+                  <Link href={link.href} className="text-white/80 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -82,50 +48,34 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-bold mb-4 text-[var(--franciscan-cord)]">
-              Vida Franciscana
-            </h4>
-            <ul className="space-y-3">
-              {footerContent.links.life.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-base font-medium text-[var(--franciscan-sand)] hover:text-[var(--franciscan-cord)] transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Column */}
-          <div>
-            <h4 className="font-serif text-lg font-bold mb-4 text-[var(--franciscan-cord)]">
-              Contato
-            </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-1 text-[var(--franciscan-cord)] flex-shrink-0" />
-                <span className="text-base font-medium text-[var(--franciscan-sand)]">
+            <h4 className="font-semibold text-white mb-3">Contato</h4>
+            <ul className="space-y-2 text-white/75">
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 text-white/85" />
+                <span>
                   {contactContent.address.street}
                   <br />
                   {contactContent.address.neighborhood}
                   <br />
                   {contactContent.address.city} - {contactContent.address.state}
+                  <br />
+                  CEP: {contactContent.address.zip}
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[var(--franciscan-cord)] flex-shrink-0" />
-                <span className="text-base font-bold text-[var(--franciscan-cream)]">
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-white/85" />
+                <a
+                  href={`tel:${contactContent.phones[0].number.replace(/\D/g, "")}`}
+                  className="text-white/80 hover:text-white transition-colors"
+                >
                   {contactContent.phones[0].number}
-                </span>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[var(--franciscan-cord)] flex-shrink-0" />
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-white/85" />
                 <a
                   href={`mailto:${contactContent.email}`}
-                  className="text-base font-medium text-[var(--franciscan-sand)] hover:text-[var(--franciscan-cord)] transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   {contactContent.email}
                 </a>
@@ -135,23 +85,19 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t-2 border-[var(--franciscan-earth)]">
-        <div className="container-franciscan py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm font-medium text-[var(--franciscan-sand)]">
-              © {currentYear} Ordem dos Frades Menores - Província Santa Cruz. Todos os direitos reservados.
+      <div className="border-t border-white/15">
+        <div className="container-franciscan py-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/75">
+            <p className="text-center md:text-left">
+              © 2026 Ordem dos Frades Menores – Província Santa Cruz
             </p>
-            <div className="flex gap-6">
-              {footerContent.legal.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-sm font-medium text-[var(--franciscan-sand)] hover:text-[var(--franciscan-cord)] transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <div className="flex items-center gap-5">
+              <Link href="#privacidade" className="text-white/80 hover:text-white transition-colors">
+                Política de Privacidade
+              </Link>
+              <Link href="#termos" className="text-white/80 hover:text-white transition-colors">
+                Termos de Uso
+              </Link>
             </div>
           </div>
         </div>

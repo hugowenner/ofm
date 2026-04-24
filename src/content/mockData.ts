@@ -7,9 +7,9 @@
  */
 
 export const siteConfig = {
-  name: "Frades Menores no Brasil",
+  name: "Frades Menores",
   fullName: "Ordem dos Frades Menores - Província Santa Cruz",
-  description: "Uma presença franciscana viva: fraternidade, simplicidade e cuidado com a criação",
+  description: "Perto das pessoas, no caminho de Francisco",
   url: "https://fradesmenores.org.br",
   province: "Província Santa Cruz",
   location: "Belo Horizonte, MG",
@@ -18,12 +18,11 @@ export const siteConfig = {
 
 export const navigation = {
   main: [
-    { name: "Quem Somos", href: "#quem-somos" },
-    { name: "Espiritualidade", href: "#espiritualidade" },
-    { name: "Presenças", href: "#presencas" },
-    { name: "Vocações", href: "#vocacoes" },
+    { name: "A Província Santa Cruz", href: "#provincia-santa-cruz" },
+    { name: "Vocações", href: "#vocacao" },
+    { name: "Vida e Missão", href: "#vida-e-missao" },
     { name: "Reflexões", href: "#reflexoes" },
-    { name: "Contato", href: "#contato" },
+    { name: "Contato", href: "#fale-conosco" },
   ],
   social: [
     { name: "Instagram", href: "https://instagram.com/vocacaofranciscanaofm", icon: "instagram" },
@@ -33,229 +32,262 @@ export const navigation = {
 };
 
 export const heroContent = {
-  title: "Uma presença que acolhe",
-  subtitle: "Frades Menores no Brasil",
-  description: `Há mais de 800 anos, Francisco de Assis escolheu viver o Evangelho 
-    com simplicidade e alegria. Hoje, continuamos essa busca: homens que vivem em 
-    fraternidade, servindo com humildade e cuidando de toda a criação.`,
+  title: "Perto das pessoas, no caminho de Francisco",
+  subtitle: "Frades Menores · Província Santa Cruz",
+  description: `Somos uma fraternidade em movimento. Vivemos a fé com simplicidade, 
+    escuta e presença real. Caminhamos com o povo. Servimos nas comunidades. 
+    E buscamos viver o Evangelho no ritmo da vida concreta.`,
   cta: {
-    primary: { text: "Conhecer nossa história", href: "#quem-somos" },
-    secondary: { text: "Vida franciscana", href: "#espiritualidade" },
+    primary: { text: "Conhecer nossa história", href: "#provincia-santa-cruz" },
+    secondary: { text: "Nossa vida franciscana", href: "#provincia-santa-cruz" },
   },
   quote: {
-    text: "O Senhor me disse que queria que eu fosse um novo louco no mundo.",
+    text: "Começamos pequenos, mas não queremos viver longe de ninguém.",
     author: "Francisco de Assis",
   },
 };
 
 export const aboutContent = {
   title: "Quem Somos",
-  subtitle: "Uma família fraterna a serviço do Reino",
-  description: `Somos a Ordem dos Frades Menores (OFM) no Brasil, parte de uma família 
-    religiosa presente em todo o mundo. Vivemos em fraternidade, seguindo Jesus Cristo 
-    no carisma de Francisco de Assis.`,
+  subtitle: "Uma fraternidade que aprendeu a caminhar junto",
+  description: `Nossa história começou longe daqui. A tradição franciscana chegou ao Brasil 
+    pela coragem de frades vindos da Holanda, que encontraram em Manaus o primeiro passo 
+    dessa missão. Depois vieram o Rio de Janeiro, Minas Gerais e muitos outros lugares. 
+    Aos poucos, essa presença ganhou rosto brasileiro e se tornou a Província Santa Cruz.`,
   pillars: [
     {
       title: "Fraternidade",
-      description: "Vivemos como irmãos, partilhando vida, fé e missão. Nossa comunidade é sinal de que outro mundo é possível.",
+      description: "Partilhamos a vida de forma concreta. Rezamos juntos, decidimos juntos e aprendemos a servir como irmãos de verdade.",
       icon: "users",
     },
     {
       title: "Minoridade",
-      description: "Escolhemos viver sem poder, sem posses, sem prestígio. Estamos entre os últimos, como Jesus esteve.",
+      description: "Preferimos a simplicidade aos aplausos. Estar em segundo plano, para nós, é uma forma de ficar mais perto de quem precisa.",
       icon: "heart",
     },
     {
       title: "Missão",
-      description: "Anunciamos o Evangelho com a vida, não apenas com palavras. Estamos presente nas periferias existenciais.",
+      description: "A missão acontece onde a vida acontece: nas comunidades, nas escolas, nas periferias, nas paróquias e nos projetos sociais.",
       icon: "compass",
     },
     {
       title: "Criação",
-      description: "Cuidamos da Casa Comum. Para Francisco, todas as criaturas eram irmãs, dignas de respeito e cuidado.",
+      description: "Cuidar da criação é cuidar da casa comum. O mundo não é cenário. É dom, responsabilidade e relação.",
       icon: "leaf",
     },
   ],
   stats: [
-    { value: "800+", label: "Anos de história" },
-    { value: "120", label: "Frades no Brasil" },
-    { value: "25", label: "Comunidades" },
-    { value: "6", label: "Estados presentes" },
+    { value: "1891", label: "Início da missão no Brasil" },
+    { value: "1950", label: "Autonomia provincial" },
+    { value: "6", label: "Estados de presença" },
+    { value: "1", label: "Fraternidade em caminho" },
+  ],
+};
+
+export const historyContent = {
+  title: "Nossa História",
+  subtitle: "Da Holanda ao Brasil, uma missão que foi criando raiz",
+  description: `A história da Província Santa Cruz começa na tradição franciscana 
+    da Holanda e atravessa o oceano até chegar ao Brasil. Em Manaus, os primeiros 
+    frades enfrentaram doenças, distâncias e as exigências de uma missão que pedia 
+    coragem. Depois, vieram o Rio de Janeiro e Minas Gerais, onde a presença foi se 
+    tornando mais estável, mais próxima e mais enraizada. Em 1950, essa caminhada 
+    ganhou autonomia provincial. O que era missão se tornou casa, fraternidade e 
+    responsabilidade compartilhada.`,
+  moments: [
+    {
+      title: "Chegada ao Brasil",
+      description: "Os primeiros passos nasceram da travessia e da confiança. A missão desembarcou em Manaus e encontrou o desafio de começar do zero.",
+    },
+    {
+      title: "Tempo de prova",
+      description: "A Amazônia trouxe doenças, distâncias e limitações. Foi um período duro, mas também fundador. A presença se mostrou firme onde havia fragilidade.",
+    },
+    {
+      title: "Expansão e enraizamento",
+      description: "Com o tempo, a missão se ampliou para o Rio de Janeiro e Minas Gerais. Paróquias, formação e comunidades deram novo corpo à presença franciscana.",
+    },
+    {
+      title: "Autonomia em 1950",
+      description: "A Província Santa Cruz passou a caminhar com rosto próprio. Não foi o fim de uma história. Foi o começo de uma maturidade vivida em fidelidade.",
+    },
   ],
 };
 
 export const spiritualityContent = {
   title: "Nossa Espiritualidade",
-  subtitle: "O caminho de Francisco",
-  description: `A espiritualidade franciscana nasce do encontro com o Deus que se faz 
-    pobre e menor. É uma espiritualidade encarnada, alegre, simples - que encontra 
-    o divino no cotidiano e em cada criatura.`,
+  subtitle: "Rezar com os pés no chão",
+  description: `A espiritualidade franciscana é simples porque nasce da vida. Ela não 
+    separa oração e serviço, fé e cotidiano, silêncio e convivência. Francisco nos ensinou 
+    a ver Deus no concreto: no irmão, na irmã, na mesa partilhada, na criação e nos gestos 
+    pequenos que sustentam o amor.`,
   elements: [
     {
       title: "O Evangelho como regra",
-      description: "Para Francisco, o Evangelho não era um livro de leis, mas um convite à vida. Cada palavra de Jesus era para ser vivida, não apenas estudada.",
+      description: "Não começamos por ideias. Começamos por uma vida que quer escutar Jesus e traduzir o Evangelho em atitudes simples.",
     },
     {
       title: "A pobreza como liberdade",
-      description: "Não por penitência, mas por amor. A pobreza liberta para relações genuínas, sem possessão nem dominação.",
+      description: "Viver com pouco não é falta. É liberdade para servir, partilhar e não fazer da posse o centro da vida.",
     },
     {
       title: "A criação como revelação",
-      description: "Em todas as criaturas, Francisco via um reflexo do Criador. Irmão Sol, Irmã Lua, Irmão Lobo - todos eram família.",
+      description: "A natureza não é só beleza. É relação. Cuidar da criação é reconhecer que a vida inteira merece respeito.",
     },
     {
       title: "A alegria como testemunho",
-      description: "Os frades devem alegrar-se sempre no Senhor. A alegria franciscana brota da gratidão, não das circunstâncias.",
+      description: "A alegria franciscana não é barulho. É serenidade, gratidão e esperança mesmo quando o caminho é exigente.",
     },
   ],
   highlights: [
     {
       title: "Oração Contemplativa",
       image: "/images/prayer.jpg",
-      description: "A oração é o coração da vida franciscana. Momentos de silêncio, escuta e adoração.",
+      description: "O silêncio abre espaço para ouvir melhor a Deus e também o que a vida pede de nós.",
     },
     {
       title: "Vida Fraterna",
       image: "/images/community.jpg",
-      description: "Compartilhamos tudo: oração, trabalho, mesa, sonhos. A fraternidade é nossa primeira pregação.",
+      description: "Compartilhar a mesa, o trabalho e a oração é o jeito mais real de anunciar fraternidade.",
     },
     {
       title: "Serviço aos Pobres",
       image: "/images/service.jpg",
-      description: "Estamos presentes nas periferias, nos hospitais, nas escolas, nas ruas. Onde há necessidade, há franciscanos.",
+      description: "Nossa presença ganha sentido quando está perto de quem mais precisa: nas periferias, nas escolas, nas ruas e nos projetos sociais.",
     },
   ],
 };
 
 export const presenceContent = {
   title: "Nossas Presenças",
-  subtitle: "Onde estamos",
-  description: `A Província Santa Cruz está presente em seis estados brasileiros, 
-    em grandes cidades e no interior, em paróquias, santuários, escolas e obras sociais.`,
+  subtitle: "Onde a vida nos chama",
+  description: `Estamos em diferentes cidades e estados, mas sempre com o mesmo propósito: 
+    estar perto das pessoas. Em cada lugar, a presença franciscana se traduz em educação, 
+    pastoral, acolhida, formação e trabalho social.`,
   locations: [
     {
       city: "Belo Horizonte",
       state: "MG",
       type: "Sede Provincial",
-      description: "Casa provincial e curia, formação inicial, paróquia e santuário.",
+      description: "Casa provincial, formação, discernimento e articulação da vida fraterna.",
     },
     {
       city: "São Paulo",
       state: "SP",
       type: "Comunidade",
-      description: "Presença em bairros periféricos, pastoral universitária.",
+      description: "Comunidades em bairros periféricos, com atenção à educação e à pastoral universitária.",
     },
     {
       city: "Rio de Janeiro",
       state: "RJ",
       type: "Comunidade",
-      description: "Paróquia histórica, trabalho com população de rua.",
+      description: "Paróquia histórica e serviço junto a pessoas em situação de rua e vulnerabilidade.",
     },
     {
       city: "Ouro Preto",
       state: "MG",
       type: "Santuário",
-      description: "Santuário histórico, turismo religioso, arte sacra.",
+      description: "Santuário, acolhida de peregrinos, arte sacra e memória viva da fé.",
     },
     {
       city: "Tiradentes",
       state: "MG",
       type: "Paróquia",
-      description: "Paróquia histórica, formação permanente, retiros.",
+      description: "Paróquia, retiros, acompanhamento espiritual e cuidado com a vida comunitária.",
     },
     {
       city: "Diamantina",
       state: "MG",
       type: "Comunidade",
-      description: "Presença no Vale do Jequitinhonha, obras sociais.",
+      description: "Presença no Vale do Jequitinhonha com obras sociais e serviço às famílias da região.",
     },
     {
       city: "Juiz de Fora",
       state: "MG",
       type: "Comunidade",
-      description: "Paróquia universitária, pastoral da comunicação.",
+      description: "Paróquia universitária e pastoral da comunicação, com atenção à formação e ao diálogo.",
     },
     {
       city: "Vitória",
       state: "ES",
       type: "Comunidade",
-      description: "Paróquia e obras sociais, pastoral da saúde.",
+      description: "Paróquia, obras sociais e presença junto à saúde e ao cuidado das pessoas.",
     },
     {
       city: "Curitiba",
       state: "PR",
       type: "Comunidade",
-      description: "Centro de espiritualidade, retiros e formação.",
+      description: "Centro de espiritualidade, retiros, formação e escuta vocacional.",
     },
     {
       city: "Brasília",
       state: "DF",
       type: "Comunidade",
-      description: "Presença na capital federal, pastoral política.",
+      description: "Presença na capital federal com serviço pastoral e diálogo com a vida pública.",
     },
   ],
 };
 
 export const vocationsContent = {
   title: "Vocações",
-  subtitle: "Uma chamada à vida plena",
-  description: `Você sente um apelo para algo maior? Uma inquietação que não se 
-    cala? Talvez Deus esteja te convidando para uma aventura de fé e serviço 
-    como franciscano.`,
+  subtitle: "Quando a pergunta vira caminho",
+  description: `Talvez você esteja vivendo uma busca silenciosa. Talvez exista em você 
+    um desejo de servir, de viver com mais simplicidade e de encontrar uma forma de vida 
+    mais livre. Se essa pergunta mora no seu coração, vale escutá-la com calma.`,
   steps: [
     {
       number: "01",
       title: "Discernimento",
-      description: "Um período de escuta e acompanhamento para conhecer a vocação franciscana e discernir sua chamada.",
+      description: "Tempo de escuta, conversa e acompanhamento para entender se esse caminho faz sentido para sua vida.",
     },
     {
       number: "02",
       title: "Postulantado",
-      description: "Tempo de integração à vida fraterna, estudo da fé e conhecimento da história franciscana.",
+      description: "Fase de convivência mais próxima, estudo e encontro com a vida fraterna no dia a dia.",
     },
     {
       number: "03",
       title: "Noviciado",
-      description: "Ano de formação intensiva, aprofundamento da espiritualidade e compromisso com a Ordem.",
+      description: "Ano de formação mais intensa, para aprofundar a espiritualidade e amadurecer o compromisso.",
     },
     {
       number: "04",
       title: "Profissão",
-      description: "Compromisso público de viver os conselhos evangélicos em fraternidade, como sinal do Reino.",
+      description: "Momento de assumir publicamente a vida fraterna e os conselhos evangélicos como escolha definitiva.",
     },
   ],
   contact: {
-    title: "Quer saber mais?",
-    description: "Nossa equipe de animação vocacional está disponível para conversar, tirar dúvidas e acompanhar seu discernimento.",
+    title: "Quer conversar?",
+    description: "Nossa equipe de animação vocacional pode caminhar com você, sem pressa e sem fórmulas prontas.",
     email: "vocacoes@fradesmenores.org.br",
-    phone: "(31) 3333-4444",
+    phone: "(31) 3469-5545",
     schedule: "Atendimento de segunda a sexta, das 9h às 17h",
   },
 };
 
 export const reflectionsContent = {
   title: "Reflexões",
-  subtitle: "Pensamentos para o caminho",
-  description: `Textos breves, orações e meditações para alimentar a jornada 
-    espiritual. O silêncio que fala, a palavra que silencia.`,
+  subtitle: "Palavras para caminhar",
+  description: `Textos breves, orações e meditações nascidas da vida franciscana. 
+    Não para ensinar de cima, mas para acompanhar de perto.`,
   posts: [
     {
-      title: "Onde está Deus?",
-      excerpt: "Não nos templos suntuosos, mas nas periferias da existência. Francisco descobriu Deus nos leprosos, nos pobres, na natureza ferida.",
+      title: "Deus também passa pelo cotidiano",
+      excerpt: "Nem sempre Deus se revela no extraordinário. Muitas vezes, Ele aparece no cuidado simples, na mesa partilhada e na atenção ao outro.",
       author: "Frei Carlos Mestre",
       date: "2025-01-15",
       category: "Espiritualidade",
     },
     {
-      title: "A alegria de ser menor",
-      excerpt: "Num mundo que exalta o sucesso e o poder, escolher ser menor é uma revolução silenciosa. É se libertar para amar de verdade.",
+      title: "Ser menor para ficar mais perto",
+      excerpt: "Escolher a minoridade é recusar a lógica do prestígio para viver relações mais verdadeiras, mais livres e mais humanas.",
       author: "Frei João Silva",
       date: "2025-01-10",
       category: "Vida Franciscana",
     },
     {
       title: "Cuidar da Casa Comum",
-      excerpt: "A ecologia não é modismo para franciscanos. É herança de Francisco, que via em cada criatura um reflexo do Criador.",
+      excerpt: "A criação é dom, não recurso. Quando a preservamos, estamos protegendo a vida de todos e honrando a herança de Francisco.",
       author: "Frei Pedro Santos",
       date: "2025-01-05",
       category: "Criação",
@@ -263,22 +295,55 @@ export const reflectionsContent = {
   ],
 };
 
+export const lifeAndMissionContent = {
+  title: "Vida e Missão",
+  subtitle: "A missão acontecendo no chão da vida",
+  description: `Aqui você encontra sinais concretos da presença franciscana: ações sociais,
+    encontros, notícias das comunidades e histórias reais de quem caminha com a gente.
+    Não é vitrine institucional. É vida partilhada em movimento.`,
+  items: [
+    {
+      title: "Cozinha solidária amplia atendimento no Aglomerado",
+      description:
+        "Com apoio de voluntários e famílias da comunidade, o projeto passou a servir 280 refeições semanais e abriu rodas de escuta para mães e idosos.",
+      category: "Missão",
+      date: "2026-04-10",
+      href: "#vida-e-missao",
+    },
+    {
+      title: "Encontro provincial de juventudes franciscanas",
+      description:
+        "Jovens de seis cidades se reuniram em Belo Horizonte para um fim de semana de oração, oficinas de serviço e mutirão com pessoas em situação de rua.",
+      category: "Evento",
+      date: "2026-03-22",
+      href: "#vida-e-missao",
+    },
+    {
+      title: "Presença diária na beira do hospital",
+      description:
+        "Em Juiz de Fora, frades e leigos mantêm uma escala de visitas, bênçãos e acolhida para acompanhantes em longas internações, com apoio emocional e orientação prática.",
+      category: "Testemunho",
+      date: "2026-02-28",
+      href: "#vida-e-missao",
+    },
+  ],
+};
+
 export const contactContent = {
-  title: "Contato",
-  subtitle: "Fale conosco",
-  description: `Estamos à disposição para conversar, esclarecer dúvidas, 
-    agendar visitas ou receber suas intenções de oração.`,
+  title: "Onde estamos",
+  subtitle: "Província Santa Cruz em Belo Horizonte",
+  description: `Se você quer conhecer melhor nossa missão, tirar dúvidas ou falar 
+    sobre vocação, estamos à disposição.`,
   address: {
-    street: "Rua Frei Orlando, 100",
-    neighborhood: "Centro",
+    street: "Rua Sabinópolis, 50A",
+    neighborhood: "Carlos Prates",
     city: "Belo Horizonte",
     state: "MG",
-    zip: "30110-000",
+    zip: "30710-340",
     country: "Brasil",
   },
   phones: [
-    { label: "Secretaria", number: "(31) 3333-4444" },
-    { label: "Vocações", number: "(31) 3333-5555" },
+    { label: "Secretaria", number: "(31) 3469-5545" },
   ],
   email: "contato@fradesmenores.org.br",
   hours: {
@@ -288,20 +353,20 @@ export const contactContent = {
 };
 
 export const footerContent = {
-  description: `A Ordem dos Frades Menores está presente no Brasil desde o século XIX, 
-    construindo uma história de fé, serviço e fraternidade.`,
+  description: `Uma fraternidade que atravessou oceanos, enfrentou desafios e criou raízes 
+    no Brasil sem perder a simplicidade do início.`,
   links: {
     about: [
       { name: "Nossa História", href: "#historia" },
-      { name: "A Ordem no Mundo", href: "#ordem" },
-      { name: "São Francisco", href: "#francisco" },
-      { name: "Santa Clara", href: "#clara" },
+      { name: "Quem Somos", href: "#quem-somos" },
+      { name: "Espiritualidade", href: "#espiritualidade" },
+      { name: "Presenças", href: "#presencas" },
     ],
     life: [
       { name: "Vida Fraterna", href: "#fraternidade" },
-      { name: "Oração", href: "#oracao" },
+      { name: "Oração", href: "#espiritualidade" },
       { name: "Missão", href: "#missao" },
-      { name: "Formação", href: "#formacao" },
+      { name: "Formação", href: "#vocacoes" },
     ],
     media: [
       { name: "Reflexões", href: "#reflexoes" },
@@ -315,3 +380,4 @@ export const footerContent = {
     { name: "Termos de Uso", href: "#termos" },
   ],
 };
+

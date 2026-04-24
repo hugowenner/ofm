@@ -4,10 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ========================================
-   ORDEM DOS FRADES MENORES - DESIGN SYSTEM
-   Franciscan Design System: Brown Earth, Faith, Spirit
-   Cores Franciscanas Autênticas
-   ======================================== */
+  ORDEM DOS FRADES MENORES - DESIGN SYSTEM
+  Semantic Design System: Light, Elegant, Institutional
+  ======================================== */
 
 @theme inline {
   /* Core Colors */
@@ -15,20 +14,31 @@
   --color-foreground: var(--foreground);
   
   /* Fonts */
-  --font-sans: var(--font-source-sans);
-  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-sans-app);
+  --font-serif: var(--font-serif-app);
   --font-mono: var(--font-geist-mono);
   
-  /* Franciscan Authentic Palette */
-  --color-franciscan-habit: var(--franciscan-habit);
-  --color-franciscan-cord: var(--franciscan-cord);
-  --color-franciscan-tau: var(--franciscan-tau);
-  --color-franciscan-earth: var(--franciscan-earth);
-  --color-franciscan-clay: var(--franciscan-clay);
-  --color-franciscan-sand: var(--franciscan-sand);
-  --color-franciscan-stone: var(--franciscan-stone);
-  --color-franciscan-parchment: var(--franciscan-parchment);
-  --color-franciscan-cream: var(--franciscan-cream);
+  /* Semantic Color Tokens */
+  --color-page: var(--semantic-page);
+  --color-surface: var(--semantic-surface);
+  --color-soft: var(--semantic-soft);
+  --color-primary: var(--semantic-primary);
+  --color-primary-light: var(--semantic-primary-light);
+  
+  --color-text-heading: var(--semantic-text-heading);
+  --color-text-primary: var(--semantic-text-primary);
+  --color-text-secondary: var(--semantic-text-secondary);
+  --color-text-muted: var(--semantic-text-muted);
+  --color-text-inverse: var(--semantic-text-inverse);
+  
+  --color-border-soft: var(--semantic-border-soft);
+  --color-border-strong: var(--semantic-border-strong);
+  --color-border-subtle: var(--semantic-border-subtle);
+  
+  --color-brand: var(--semantic-brand);
+  --color-brand-hover: var(--semantic-brand-hover);
+  --color-brand-deep: var(--semantic-brand-deep);
+  --color-accent: var(--semantic-accent);
   
   /* Component Colors */
   --color-card: var(--card);
@@ -77,117 +87,151 @@
   --radius: 0.5rem;
   
   /* ========================================
-     FRANCISCAN AUTHENTIC COLOR PALETTE
-     Cores do Hábito Franciscano
+     SEMANTIC COLOR PALETTE
+    Light institutional palette
      ======================================== */
   
-  /* Franciscan Habit Colors - Marrom do hábito */
-  --franciscan-habit: #6B4423;        /* Habit brown - primary */
-  --franciscan-cord: #C4A35A;         /* Cord color - golden rope */
-  --franciscan-tau: #8B6914;          /* Tau cross - deep gold */
+  /* Page & Surface Backgrounds */
+  --semantic-background: #F5EFE6; /* Main page background */
+  --semantic-page: #F5EFE6;       /* Legacy alias */
+  --semantic-surface: #FFFFFF;    /* Card/surface background */
+  --semantic-soft: #FBF8F2;       /* Soft background for sections */
+  --semantic-surface-alt: #FAF4EA;
   
-  /* Earth Tones - Tons da terra */
-  --franciscan-earth: #4A3728;        /* Deep earth brown */
-  --franciscan-clay: #8B5A2B;         /* Clay terracotta */
-  --franciscan-sand: #D4C4A8;         /* Sand beige */
-  --franciscan-stone: #5C5347;        /* Stone gray-brown */
+  /* Text - Semantic */
+  --semantic-text-heading: #5A3E2B;   /* Strong titles */
+  --semantic-text-primary: #3E2C1C;   /* Main body text */
+  --semantic-text-secondary: #7A6A5A; /* Secondary text */
+  --semantic-text-muted: #A49485;     /* Muted/auxiliary text */
+  --semantic-text-inverse: #FFFFFF;   /* Light text on dark bg */
   
-  /* Background Tones */
-  --franciscan-parchment: #F5F0E6;    /* Parchment paper */
-  --franciscan-cream: #FAF7F0;        /* Cream white */
+  /* Borders - Semantic */
+  --semantic-border-subtle: #E6DED3;  /* Subtle borders */
+  --semantic-border-soft: #E6DED3;    /* Legacy alias */
+  --semantic-border-strong: #D2C4B5;  /* Strong borders */
+  
+  /* Brand & Accent */
+  --semantic-primary: #5A3E2B;       /* Primary brand color */
+  --semantic-primary-light: #8B6A4E; /* Brand on hover */
+  --semantic-brand: #5A3E2B;        /* Legacy alias */
+  --semantic-brand-hover: #8B6A4E;   /* Legacy alias */
+  --semantic-brand-deep: #4A3B32;    /* Legacy alias */
+  --semantic-accent: #6C8F6B;      /* Accent/support color */
   
   /* ========================================
-     COMPONENT MAPPING - Cores Franciscanas
+     HSL COMPONENT MAPPING (for ShadCN compatibility)
      ======================================== */
   
-  --background: var(--franciscan-parchment);
-  --foreground: var(--franciscan-earth);
+  --background: 38 100% 96%;           /* page background */
+  --foreground: 24 42% 17%;            /* text-primary */
   
-  --card: var(--franciscan-cream);
-  --card-foreground: var(--franciscan-earth);
+  --card: 0 0% 100%;                   /* surface background */
+  --card-foreground: 24 42% 17%;       /* text-primary */
   
-  --popover: var(--franciscan-cream);
-  --popover-foreground: var(--franciscan-earth);
+  --popover: 0 0% 100%;
+  --popover-foreground: 24 42% 17%;
   
-  --primary: var(--franciscan-habit);
-  --primary-foreground: var(--franciscan-cream);
+  --primary: 24 42% 25%;               /* primary */
+  --primary-foreground: 0 0% 100%;     /* text-inverse */
   
-  --secondary: var(--franciscan-sand);
-  --secondary-foreground: var(--franciscan-earth);
+  --secondary: 38 67% 97%;             /* soft background */
+  --secondary-foreground: 24 42% 17%;  /* text-primary */
   
-  --muted: var(--franciscan-sand);
-  --muted-foreground: var(--franciscan-stone);
+  --muted: 38 32% 92%;                 /* border-soft blended */
+  --muted-foreground: 24 12% 52%;      /* text-muted */
   
-  --accent: var(--franciscan-clay);
-  --accent-foreground: var(--franciscan-cream);
+  --accent: 129 25% 43%;               /* accent green */
+  --accent-foreground: 38 100% 96%;
   
-  --destructive: #9B2C2C;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
   
-  --border: var(--franciscan-sand);
-  --input: var(--franciscan-sand);
-  --ring: var(--franciscan-habit);
+  --border: 38 24% 87%;                /* border-soft */
+  --input: 38 24% 87%;
+  --ring: 24 42% 25%;                  /* brand close variant */
   
-  /* Chart colors derived from palette */
-  --chart-1: var(--franciscan-habit);
-  --chart-2: var(--franciscan-clay);
-  --chart-3: var(--franciscan-cord);
-  --chart-4: var(--franciscan-tau);
-  --chart-5: var(--franciscan-stone);
+  /* Chart colors */
+  --chart-1: 24 42% 25%;               /* primary */
+  --chart-2: 24 28% 42%;               /* primary-light */
+  --chart-3: 24 18% 45%;               /* secondary */
+  --chart-4: 38 14% 70%;
+  --chart-5: 38 12% 78%;               /* text-muted */
   
-  /* Sidebar */
-  --sidebar: var(--franciscan-cream);
-  --sidebar-foreground: var(--franciscan-earth);
-  --sidebar-primary: var(--franciscan-habit);
-  --sidebar-primary-foreground: var(--franciscan-cream);
-  --sidebar-accent: var(--franciscan-sand);
-  --sidebar-accent-foreground: var(--franciscan-earth);
-  --sidebar-border: var(--franciscan-sand);
-  --sidebar-ring: var(--franciscan-habit);
+  /* Sidebar (matches semantic) */
+  --sidebar: 0 0% 100%;                /* surface */
+  --sidebar-foreground: 24 42% 17%;    /* text-primary */
+  --sidebar-primary: 24 42% 25%;       /* primary */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 38 67% 97%;
+  --sidebar-accent-foreground: 24 42% 17%;
+  --sidebar-border: 38 24% 87%;
+  --sidebar-ring: 24 42% 25%;
 }
 
-/* Dark mode - keeping Franciscan warmth */
+/* Dark mode - softened to avoid muddy blacks */
 .dark {
-  --background: #2A2118;
-  --foreground: var(--franciscan-parchment);
+  --semantic-background: #2F241C;
+  --semantic-page: #2F241C;
+  --semantic-surface: #43352B;
+  --semantic-soft: #3A2E25;
+  --semantic-surface-alt: #40332A;
   
-  --card: #362A20;
-  --card-foreground: var(--franciscan-parchment);
+  --semantic-text-heading: #F5EFE6;
+  --semantic-text-primary: #F0E3D1;
+  --semantic-text-secondary: #CBB9A6;
+  --semantic-text-muted: #A6907D;
+  --semantic-text-inverse: #2F241C;
   
-  --popover: #362A20;
-  --popover-foreground: var(--franciscan-parchment);
+  --semantic-border-subtle: #5A493D;
+  --semantic-border-soft: #5A493D;
+  --semantic-border-strong: #6A5648;
   
-  --primary: #C4A35A;           /* Golden cord for dark mode */
-  --primary-foreground: #2A2118;
+  --semantic-primary: #8B6A4E;
+  --semantic-primary-light: #A78464;
+  --semantic-brand: #8B6A4E;
+  --semantic-brand-hover: #A78464;
+  --semantic-brand-deep: #5A4438;
+  --semantic-accent: #6C8F6B;
   
-  --secondary: #4A3D30;
-  --secondary-foreground: var(--franciscan-parchment);
+  --background: 24 28% 18%;
+  --foreground: 38 100% 92%;
   
-  --muted: #4A3D30;
-  --muted-foreground: #A89B8C;
+  --card: 24 24% 24%;
+  --card-foreground: 38 100% 92%;
   
-  --accent: #A66F3D;            /* Lighter terracotta */
-  --accent-foreground: var(--franciscan-parchment);
+  --popover: 24 24% 24%;
+  --popover-foreground: 38 100% 92%;
   
-  --destructive: #C53030;
+  --primary: 24 42% 25%;
+  --primary-foreground: 0 0% 100%;
   
-  --border: #4A3D30;
-  --input: #4A3D30;
-  --ring: #C4A35A;
+  --secondary: 24 24% 24%;
+  --secondary-foreground: 38 100% 96%;
   
-  --chart-1: #C4A35A;
-  --chart-2: #A66F3D;
-  --chart-3: #8B6914;
-  --chart-4: #D4B86A;
-  --chart-5: #8B7355;
+  --muted: 24 16% 30%;
+  --muted-foreground: 24 12% 74%;
   
-  --sidebar: #362A20;
-  --sidebar-foreground: var(--franciscan-parchment);
-  --sidebar-primary: #C4A35A;
-  --sidebar-primary-foreground: #2A2118;
-  --sidebar-accent: #4A3D30;
-  --sidebar-accent-foreground: var(--franciscan-parchment);
-  --sidebar-border: #4A3D30;
-  --sidebar-ring: #C4A35A;
+  --accent: 129 25% 53%;
+  --accent-foreground: 24 28% 18%;
+  
+  --border: 24 18% 32%;
+  --input: 24 18% 32%;
+  --ring: 24 42% 25%;
+  
+  --chart-1: 24 42% 25%;
+  --chart-2: 24 28% 42%;
+  --chart-3: 24 18% 45%;
+  --chart-4: 38 14% 60%;
+  --chart-5: 38 12% 74%;
+  
+  --sidebar: 24 24% 24%;
+  --sidebar-foreground: 38 100% 92%;
+  --sidebar-primary: 24 42% 25%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 24 16% 30%;
+  --sidebar-accent-foreground: 38 100% 96%;
+  --sidebar-border: 24 18% 32%;
+  --sidebar-ring: 24 42% 25%;
 }
 
 /* ========================================
@@ -200,19 +244,31 @@
   }
   
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--semantic-background);
+    color: var(--semantic-text-primary);
+    @apply font-sans;
+    --font-sans-app: var(--font-sans);
+    --font-serif-app: var(--font-serif);
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 500;
+    letter-spacing: -0.002em;
+    background-image:
+      radial-gradient(circle at 12% 10%, color-mix(in srgb, var(--semantic-primary) 6%, transparent 94%), transparent 28%),
+      url("/patterns/tau-pattern.svg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover, 96px 96px;
+    background-position: center top, 0 0;
   }
   
   /* Typography scale - BOLD */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), Georgia, serif;
+    font-family: var(--font-serif), Georgia, serif;
     font-weight: 700;
-    line-height: 1.2;
-    color: var(--franciscan-habit);
+    line-height: 1.14;
+    color: var(--semantic-text-primary);
+    text-wrap: balance;
   }
   
   h1 {
@@ -238,16 +294,16 @@
   }
   
   p {
-    @apply text-base md:text-lg;
-    line-height: 1.7;
-    color: var(--franciscan-earth);
-    font-weight: 500;
+    @apply text-base md:text-[1.0625rem];
+    line-height: 1.75;
+    color: var(--semantic-text-primary);
+    font-weight: 400;
   }
   
   /* Strong and bold text */
   strong, b {
     font-weight: 700;
-    color: var(--franciscan-habit);
+    color: var(--semantic-text-heading);
   }
   
   /* Smooth scrolling */
@@ -257,21 +313,74 @@
   
   /* Selection */
   ::selection {
-    background: var(--franciscan-habit);
-    color: var(--franciscan-cream);
+    background: var(--semantic-brand);
+    color: var(--semantic-text-inverse);
   }
 }
 
 /* ========================================
-   CUSTOM UTILITIES
+   SEMANTIC UTILITY CLASSES
    ======================================== */
 
 @layer utilities {
-  /* Franciscan-specific utilities */
-  .text-balance {
-    text-wrap: balance;
+  /* ---- TYPOGRAPHY ---- */
+  .text-heading {
+    @apply font-serif font-bold;
+    color: var(--semantic-text-heading);
   }
   
+  .text-primary {
+    color: var(--semantic-text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--semantic-text-secondary);
+  }
+  
+  .text-muted {
+    color: var(--semantic-text-muted);
+  }
+  
+  .text-inverse {
+    color: var(--semantic-text-inverse);
+  }
+  
+  /* ---- BACKGROUNDS ---- */
+  .bg-page {
+    background-color: var(--semantic-page);
+  }
+  
+  .bg-surface {
+    background-color: var(--semantic-surface);
+  }
+  
+  .bg-soft {
+    background-color: var(--semantic-soft);
+  }
+  
+  .bg-emphasis {
+    background-color: var(--semantic-brand);
+  }
+  
+  /* ---- BORDERS ---- */
+  .border-soft {
+    border-color: var(--semantic-border-soft);
+  }
+  
+  .border-strong {
+    border-color: var(--semantic-border-strong);
+  }
+  
+  /* ---- BRAND COLORS ---- */
+  .bg-brand {
+    background-color: var(--semantic-brand);
+  }
+  
+  .text-brand {
+    color: var(--semantic-brand);
+  }
+  
+  /* ---- SPACING & LAYOUT ---- */
   .section-padding {
     @apply py-16 md:py-24 lg:py-32;
   }
@@ -280,7 +389,30 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  /* Subtle animations */
+  /* ---- FOCUS & INTERACTION ---- */
+  .focus-brand {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    focus-visible-ring-color: var(--semantic-brand);
+    focus-visible-ring-offset-color: var(--semantic-page);
+  }
+  
+  .interactive-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .interactive-lift:hover {
+    @apply -translate-y-1;
+  }
+  
+  .interactive-border {
+    @apply transition-colors duration-200;
+  }
+  
+  .interactive-border:hover {
+    border-color: var(--semantic-brand-hover);
+  }
+  
+  /* ---- ANIMATIONS ---- */
   .fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
@@ -288,44 +420,457 @@
   .slide-up {
     animation: slideUp 0.6s ease-out forwards;
   }
-  
-  /* Tau symbol styling */
+
+  /* ---- TAU & LEGACY UTILITIES ---- */
+  .text-balance {
+    text-wrap: balance;
+  }
+
   .tau-accent::before {
     content: "τ";
     font-family: Georgia, serif;
-    color: var(--franciscan-cord);
+    color: var(--semantic-border-soft);
     margin-right: 0.5rem;
     font-size: 1.2em;
     font-weight: 700;
   }
   
-  /* Franciscan colors utilities */
+  /* Legacy franciscan color classes for compatibility */
   .text-franciscan-habit {
-    color: var(--franciscan-habit);
+    color: var(--semantic-text-heading);
   }
   
   .text-franciscan-cord {
-    color: var(--franciscan-cord);
+    color: var(--semantic-border-strong);
   }
   
   .text-franciscan-tau {
-    color: var(--franciscan-tau);
+    color: var(--semantic-brand-hover);
+  }
+
+  .text-primary {
+    color: var(--semantic-text-primary);
+  }
+
+  .text-secondary {
+    color: var(--semantic-text-secondary);
+  }
+
+  .text-inverse {
+    color: var(--semantic-text-inverse);
+  }
+
+  .text-franciscan-muted {
+    color: var(--semantic-text-muted);
   }
   
   .bg-franciscan-habit {
-    background-color: var(--franciscan-habit);
+    background-color: var(--semantic-brand-deep);
   }
   
   .bg-franciscan-cord {
-    background-color: var(--franciscan-cord);
+    background-color: var(--semantic-border-soft);
   }
   
   .bg-franciscan-cream {
-    background-color: var(--franciscan-cream);
+    background-color: var(--semantic-surface);
   }
   
   .border-franciscan {
-    border-color: var(--franciscan-sand);
+    border-color: var(--semantic-border-soft);
+  }
+
+  .border-subtle {
+    border-color: var(--semantic-border-subtle);
+  }
+}
+
+@layer components {
+  /* ---- SECTION SHELLS ---- */
+  .section-shell {
+    @apply relative overflow-hidden py-16 md:py-24 lg:py-32;
+    background: linear-gradient(180deg, var(--semantic-background) 0%, var(--semantic-soft) 100%);
+    isolation: isolate;
+  }
+
+  .section-shell-alt {
+    @apply relative overflow-hidden py-16 md:py-24 lg:py-32;
+    background: linear-gradient(180deg, var(--semantic-soft) 0%, var(--semantic-surface) 100%);
+    isolation: isolate;
+  }
+
+  .section-shell::before,
+  .section-shell-alt::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image: radial-gradient(circle at 20% 15%, color-mix(in srgb, var(--semantic-primary) 7%, transparent 93%), transparent 45%);
+  }
+
+  /* ---- SECTION HEADER ---- */
+  .section-header {
+    @apply max-w-3xl mx-auto mb-14 md:mb-16;
+  }
+
+  .section-kicker {
+    @apply inline-flex items-center gap-2 uppercase tracking-[0.2em] text-[11px] md:text-xs font-bold mb-4;
+    color: color-mix(in srgb, var(--semantic-primary-light) 82%, var(--semantic-text-secondary) 18%);
+  }
+
+  .section-kicker::before {
+    content: "";
+    width: 1.8rem;
+    height: 1px;
+    background: color-mix(in srgb, var(--semantic-primary-light) 42%, var(--semantic-border-subtle) 58%);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight;
+    letter-spacing: -0.025em;
+    color: var(--semantic-primary);
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl font-medium mt-4;
+    color: var(--semantic-text-secondary);
+  }
+
+  .section-lead {
+    @apply text-base md:text-lg mt-5 leading-relaxed max-w-2xl;
+    color: var(--semantic-text-primary);
+  }
+
+  .section-header.text-center .section-lead {
+    @apply mx-auto;
+  }
+
+  /* ---- SURFACE & PANEL COMPONENTS ---- */
+  .surface-soft {
+    @apply rounded-3xl border backdrop-blur-[2px];
+    border-color: var(--semantic-border-subtle);
+    background: linear-gradient(168deg, var(--semantic-surface) 96%, var(--semantic-soft) 100%);
+    box-shadow: 0 18px 46px -38px rgba(62, 44, 28, 0.26);
+  }
+
+  .surface-highlight {
+    @apply rounded-3xl border;
+    border-color: var(--semantic-border-strong);
+    background: linear-gradient(165deg, var(--semantic-surface) 20%, var(--semantic-soft) 100%);
+    box-shadow: 0 20px 50px -40px rgba(62, 44, 28, 0.3);
+  }
+
+  /* ---- CARD COMPONENTS ---- */
+  .card-base {
+    @apply rounded-2xl border p-6 md:p-7 transition-all duration-300;
+    border-color: var(--semantic-border-subtle);
+    background-color: var(--semantic-surface);
+    box-shadow: 0 16px 38px -34px rgba(62, 44, 28, 0.3);
+  }
+
+  .card-base:hover {
+    @apply -translate-y-0.5;
+    border-color: var(--semantic-primary-light);
+  }
+
+  .card-soft {
+    @apply relative rounded-3xl border p-7 md:p-8 transition-all duration-300 backdrop-blur-[2px];
+    border-color: var(--semantic-border-subtle);
+    background: linear-gradient(165deg, var(--semantic-surface) 84%, var(--semantic-soft) 100%);
+    box-shadow: 0 18px 46px -38px rgba(62, 44, 28, 0.24);
+  }
+
+  .card-soft::before {
+    content: "";
+    @apply absolute left-8 right-8 top-0 h-px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--semantic-primary) 34%, var(--semantic-border-subtle) 66%),
+      transparent
+    );
+    opacity: 0.66;
+  }
+
+  .card-soft::after {
+    content: "";
+    @apply absolute left-8 top-4 h-px w-8;
+    background: color-mix(in srgb, var(--semantic-border-subtle) 52%, var(--semantic-primary) 48%);
+    opacity: 0.7;
+  }
+
+  .card-soft:hover {
+    border-color: var(--semantic-primary-light);
+    @apply -translate-y-1;
+    box-shadow: 0 24px 50px -38px rgba(62, 44, 28, 0.3);
+  }
+
+  .card-contact {
+    @apply relative rounded-3xl border p-7 md:p-8 transition-all duration-300;
+    border-color: var(--semantic-border-subtle);
+    background: linear-gradient(170deg, var(--semantic-surface) 88%, var(--semantic-soft) 100%);
+  }
+
+  .card-contact::after {
+    content: "";
+    @apply absolute left-0 top-7 h-20 w-0.5 rounded-full;
+    background: var(--semantic-primary);
+    opacity: 0.6;
+  }
+
+  .card-contact:hover {
+    border-color: var(--semantic-primary-light);
+    @apply -translate-y-0.5;
+    box-shadow: 0 18px 44px -40px rgba(62, 44, 28, 0.28);
+  }
+
+  /* ---- QUOTE BLOCK ---- */
+  .quote-block {
+    @apply rounded-3xl border px-7 py-8 md:px-10 md:py-10;
+    border-color: var(--semantic-border-subtle);
+    background: linear-gradient(150deg, var(--semantic-surface) 72%, var(--semantic-soft) 100%);
+  }
+
+  /* ---- BUTTONS ---- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-sm md:text-base font-medium tracking-[0.01em] transition-all duration-300;
+    border: 1px solid var(--semantic-primary);
+    background: #5A3E2B;
+    color: white;
+    border: 1px solid #5A3E2B;
+  }
+
+  .btn-primary:hover {
+    background: #4a3323;
+    border-color: #4a3323;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-sm md:text-base font-medium tracking-[0.01em] transition-all duration-300;
+    border: 1px solid #5A3E2B;
+    background: var(--semantic-surface);
+    color: #5A3E2B;
+  }
+
+  .btn-secondary:hover {
+    background: #F5EFE6;
+    border-color: #5A3E2B;
+  }
+
+  /* ---- LINKS ---- */
+  .link-primary {
+    @apply inline-flex items-center gap-2 text-sm md:text-base font-semibold transition-colors duration-200;
+    color: var(--semantic-primary);
+  }
+
+  .link-primary::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 220ms ease;
+  }
+
+  .link-primary:hover {
+    color: var(--semantic-primary-light);
+  }
+
+  .link-primary:hover::after {
+    width: 0.9rem;
+  }
+
+  .link-secondary {
+    @apply inline-flex items-center gap-2 transition-colors duration-200;
+    color: var(--semantic-text-primary);
+  }
+
+  .link-secondary::before {
+    content: "";
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--semantic-primary) 56%, var(--semantic-border-subtle) 44%);
+    opacity: 0.72;
+    transition: background-color 220ms ease, opacity 220ms ease;
+  }
+
+  .link-secondary::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 220ms ease;
+  }
+
+  .link-secondary:hover::before {
+    background: var(--semantic-primary);
+    opacity: 0.95;
+  }
+
+  .link-secondary:hover::after {
+    width: 0.8rem;
+  }
+
+  /* ---- LEGACY LINK CLASSES (for backward compatibility) ---- */
+  .link-editorial {
+    @apply inline-flex items-center gap-2 text-sm md:text-base font-semibold transition-colors duration-200;
+    color: var(--semantic-primary);
+  }
+
+  .link-editorial::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 220ms ease;
+  }
+
+  .link-editorial:hover {
+    color: var(--semantic-primary-light);
+  }
+
+  .link-editorial:hover::after {
+    width: 0.9rem;
+  }
+
+  .link-editorial-title {
+    @apply inline-flex items-center gap-2 transition-colors duration-200;
+  }
+
+  .link-editorial-title::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 220ms ease;
+  }
+
+  .link-editorial-title:hover::after {
+    width: 0.9rem;
+  }
+
+  .link-micro {
+    @apply inline-flex items-center gap-2 transition-colors duration-200;
+    color: var(--semantic-text-primary);
+  }
+
+  .link-micro::before {
+    content: "";
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--semantic-primary) 56%, var(--semantic-border-subtle) 44%);
+    opacity: 0.72;
+    transition: background-color 220ms ease, opacity 220ms ease;
+  }
+
+  .link-micro::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 220ms ease;
+  }
+
+  .link-micro:hover::before {
+    background: var(--semantic-primary);
+    opacity: 0.95;
+  }
+
+  .link-micro:hover::after {
+    width: 0.8rem;
+  }
+
+  .link-micro-sm {
+    @apply inline-flex items-center transition-colors duration-200;
+    gap: 0.375rem;
+  }
+
+  .link-micro-sm::before {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+
+  .link-micro-sm:hover::after {
+    width: 0.65rem;
+  }
+
+  /* ---- BUTTON LEGACY COMPATIBILITY ---- */
+  .btn-institutional {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-sm md:text-base font-medium tracking-[0.01em] transition-all duration-300;
+    border: 1px solid #5A3E2B;
+    background: #5A3E2B;
+    color: white;
+  }
+
+  .btn-institutional:hover {
+    background: #4a3323;
+    border-color: #4a3323;
+  }
+
+  .btn-secondary-institutional {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-sm md:text-base font-medium tracking-[0.01em] transition-all duration-300;
+    border: 1px solid #5A3E2B;
+    background: transparent;
+    color: #5A3E2B;
+  }
+
+  .btn-secondary-institutional:hover {
+    background: #F5EFE6;
+    border-color: #5A3E2B;
+  }
+
+  /* ---- CARD LEGACY COMPATIBILITY ---- */
+  .card-premium {
+    @apply relative rounded-3xl border p-7 md:p-8 transition-all duration-300 backdrop-blur-[2px];
+    border-color: var(--semantic-border-subtle);
+    background: linear-gradient(165deg, var(--semantic-surface) 84%, var(--semantic-soft) 100%);
+    box-shadow: 0 18px 46px -38px rgba(62, 44, 28, 0.24);
+  }
+
+  .card-premium::before {
+    content: "";
+    @apply absolute left-8 right-8 top-0 h-px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--semantic-primary) 34%, var(--semantic-border-subtle) 66%),
+      transparent
+    );
+    opacity: 0.66;
+  }
+
+  .card-premium::after {
+    content: "";
+    @apply absolute left-8 top-4 h-px w-8;
+    background: color-mix(in srgb, var(--semantic-border-subtle) 52%, var(--semantic-primary) 48%);
+    opacity: 0.7;
+  }
+
+  .card-premium:hover {
+    border-color: var(--semantic-primary-light);
+    @apply -translate-y-1;
+    box-shadow: 0 24px 50px -38px rgba(62, 44, 28, 0.3);
+  }
+
+  .card-editorial {
+    @apply relative rounded-3xl border p-7 md:p-8 transition-all duration-300;
+    border-color: var(--semantic-border-subtle);
+    background: linear-gradient(170deg, var(--semantic-surface) 88%, var(--semantic-soft) 100%);
+  }
+
+  .card-editorial::after {
+    content: "";
+    @apply absolute left-0 top-7 h-20 w-0.5 rounded-full;
+    background: var(--semantic-primary);
+    opacity: 0.6;
+  }
+
+  .card-editorial:hover {
+    border-color: var(--semantic-primary-light);
+    @apply -translate-y-0.5;
+    box-shadow: 0 18px 44px -40px rgba(62, 44, 28, 0.28);
   }
 }
 
@@ -363,16 +908,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--franciscan-sand);
+  background: var(--semantic-page);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--franciscan-habit);
+  background: var(--semantic-brand);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--franciscan-earth);
+  background: var(--semantic-brand-hover);
 }
 
 /* ========================================
@@ -380,7 +925,7 @@
    ======================================== */
 
 :focus-visible {
-  outline: 3px solid var(--franciscan-cord);
+  outline: 3px solid var(--semantic-brand);
   outline-offset: 2px;
 }
 

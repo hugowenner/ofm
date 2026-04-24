@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Source_Sans_3, Playfair_Display, Geist_Mono } from "next/font/google";
+import { Fraunces, IBM_Plex_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
+const fraunces = Fraunces({
+  variable: "--font-serif",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -22,11 +22,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Frades Menores no Brasil | Província Santa Cruz",
-    template: "%s | Frades Menores no Brasil",
+    default: "Perto das pessoas, no caminho de Francisco | Frades Menores · Província Santa Cruz",
+    template: "%s | Frades Menores · Província Santa Cruz",
   },
   description:
-    "Ordem dos Frades Menores no Brasil - Província Santa Cruz. Uma presença franciscana viva: fraternidade, simplicidade e cuidado com a criação. Conheça nossa história, espiritualidade e missão.",
+    "Frades Menores · Província Santa Cruz. Uma presença franciscana viva, feita de fraternidade, simplicidade, missão e cuidado com a vida.",
   keywords: [
     "Franciscanos",
     "Frades Menores",
@@ -52,10 +52,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://fradesmenores.org.br",
-    siteName: "Frades Menores no Brasil",
-    title: "Frades Menores no Brasil | Província Santa Cruz",
-    description:
-      "Uma presença franciscana viva: fraternidade, simplicidade e cuidado com a criação.",
+    siteName: "Frades Menores · Província Santa Cruz",
+    title: "Perto das pessoas, no caminho de Francisco | Frades Menores · Província Santa Cruz",
+    description: "Uma presença franciscana viva, feita de fraternidade, simplicidade, missão e cuidado com a vida.",
     images: [
       {
         url: "/og-image.jpg",
@@ -67,9 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Frades Menores no Brasil | Província Santa Cruz",
-    description:
-      "Uma presença franciscana viva: fraternidade, simplicidade e cuidado com a criação.",
+    title: "Perto das pessoas, no caminho de Francisco | Frades Menores · Província Santa Cruz",
+    description: "Uma presença franciscana viva, feita de fraternidade, simplicidade, missão e cuidado com a vida.",
     images: ["/og-image.jpg"],
   },
   icons: {
@@ -87,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${sourceSans.variable} ${playfairDisplay.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${ibmPlexSans.variable} ${fraunces.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         {children}
         <Toaster />

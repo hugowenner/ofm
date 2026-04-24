@@ -5,126 +5,143 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Clock } from "lucide-react";
+import { ArrowRight, Clock, Mail, Phone } from "lucide-react";
 import { vocationsContent } from "@/content/mockData";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export function VocationsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="vocacoes" className="section-padding bg-[var(--franciscan-habit)] text-[var(--franciscan-cream)]">
+    <section
+      id="vocacoes"
+      className="section-padding relative overflow-hidden text-primary"
+      style={{
+        background:
+          "radial-gradient(circle at 12% -8%, rgba(139,106,78,0.12), transparent 38%), radial-gradient(circle at 88% 115%, rgba(230,222,211,0.7), transparent 44%), linear-gradient(180deg, #F5EFE6 0%, #FBF8F2 100%)",
+      }}
+    >
+      <div className="pointer-events-none absolute inset-0 opacity-[0.22] bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.6),transparent_42%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.45),rgba(245,239,230,0.12))]" />
       <div className="container-franciscan" ref={ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          <SectionHeader
+            kicker="Chamado"
+            title={vocationsContent.title}
+            subtitle={vocationsContent.subtitle}
+            description={vocationsContent.description}
+            className="mb-14"
+          />
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--franciscan-cream)] mb-4">
-              {vocationsContent.title}
-            </h2>
-            <p className="text-xl font-bold text-[var(--franciscan-cord)] mb-6">
-              {vocationsContent.subtitle}
-            </p>
-            <p className="text-lg font-medium text-[var(--franciscan-sand)] leading-relaxed mb-10">
-              {vocationsContent.description}
-            </p>
-
-            {/* Steps */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               {vocationsContent.steps.map((step, index) => (
                 <motion.div
                   key={step.number}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex gap-4"
+                  className="relative rounded-3xl border border-subtle bg-surface p-5 md:p-6 shadow-[0_18px_40px_-34px_rgba(62,44,28,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-light hover:shadow-[0_22px_42px_-30px_rgba(62,44,28,0.28)]"
                 >
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-[var(--franciscan-cord)] text-[var(--franciscan-habit)] flex items-center justify-center font-serif font-bold text-lg shadow-lg">
-                    {step.number}
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-2xl border border-primary bg-[linear-gradient(170deg,var(--semantic-primary),var(--semantic-primary-light))] text-inverse flex items-center justify-center font-serif font-bold text-base shadow-[0_12px_24px_-18px_rgba(90,62,43,0.5)]">
+                      {step.number}
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-lg md:text-xl font-bold text-primary mb-1 leading-tight">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm md:text-base font-medium text-secondary leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-serif text-lg font-bold text-[var(--franciscan-cream)] mb-1">
-                      {step.title}
-                    </h3>
-                    <p className="text-base font-medium text-[var(--franciscan-sand)] leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                  <span className="absolute right-5 top-5 inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-primary border border-subtle bg-background/80">
+                    Etapa
+                  </span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Right Content - Contact Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:pl-8"
           >
-            <div className="bg-[var(--franciscan-cream)] rounded-2xl p-8 text-[var(--franciscan-habit)]">
-              <h3 className="font-serif text-2xl font-bold mb-4">
+              <div className="surface-soft p-8 text-primary">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 leading-tight">
                 {vocationsContent.contact.title}
               </h3>
-              <p className="text-base font-medium text-[var(--franciscan-earth)] mb-8 leading-relaxed">
+                <p className="text-base font-medium text-secondary mb-8 leading-relaxed">
                 {vocationsContent.contact.description}
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-4 p-4 rounded-lg bg-[var(--franciscan-sand)]/30">
-                  <div className="w-12 h-12 rounded-lg bg-[var(--franciscan-habit)] flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-[var(--franciscan-cream)]" />
+              <div className="space-y-3 mb-8">
+                  <div className="flex items-center gap-4 p-4 rounded-xl border border-subtle bg-background/75 hover:bg-surface transition-colors duration-300">
+                    <div className="w-11 h-11 rounded-xl bg-primary flex items-center justify-center">
+                      <Mail className="w-5 h-5 text-inverse" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[var(--franciscan-stone)]">E-mail</p>
+                      <p className="text-[11px] uppercase tracking-widest font-semibold text-secondary">E-mail</p>
                     <a
                       href={`mailto:${vocationsContent.contact.email}`}
-                      className="font-bold text-[var(--franciscan-habit)] hover:underline"
+                        className="font-semibold text-primary hover:text-primary-light transition-colors"
                     >
                       {vocationsContent.contact.email}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 rounded-lg bg-[var(--franciscan-sand)]/30">
-                  <div className="w-12 h-12 rounded-lg bg-[var(--franciscan-habit)] flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-[var(--franciscan-cream)]" />
+                  <div className="flex items-center gap-4 p-4 rounded-xl border border-subtle bg-background/75 hover:bg-surface transition-colors duration-300">
+                    <div className="w-11 h-11 rounded-xl bg-primary flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-inverse" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[var(--franciscan-stone)]">Telefone</p>
+                      <p className="text-[11px] uppercase tracking-widest font-semibold text-secondary">Telefone</p>
                     <a
                       href={`tel:${vocationsContent.contact.phone.replace(/\D/g, "")}`}
-                      className="font-bold text-[var(--franciscan-habit)] hover:underline"
+                        className="font-semibold text-primary hover:text-primary-light transition-colors"
                     >
                       {vocationsContent.contact.phone}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 rounded-lg bg-[var(--franciscan-sand)]/30">
-                  <div className="w-12 h-12 rounded-lg bg-[var(--franciscan-habit)] flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-[var(--franciscan-cream)]" />
+                  <div className="flex items-center gap-4 p-4 rounded-xl border border-subtle bg-background/75 hover:bg-surface transition-colors duration-300">
+                    <div className="w-11 h-11 rounded-xl bg-primary flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-inverse" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[var(--franciscan-stone)]">Horário</p>
-                    <p className="font-medium text-[var(--franciscan-earth)]">
-                      {vocationsContent.contact.schedule}
-                    </p>
+                      <p className="text-[11px] uppercase tracking-widest font-semibold text-secondary">Horário</p>
+                      <p className="font-medium text-primary">{vocationsContent.contact.schedule}</p>
                   </div>
                 </div>
               </div>
 
-              <Button
-                asChild
-                className="w-full bg-[var(--franciscan-habit)] hover:bg-[var(--franciscan-earth)] text-[var(--franciscan-cream)] font-bold text-lg"
-              >
-                <Link href={`mailto:${vocationsContent.contact.email}`}>
-                  Entrar em contato
-                </Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                  <Button asChild className="btn-institutional w-full sm:w-auto rounded-xl">
+                  <Link href={`mailto:${vocationsContent.contact.email}`}>
+                    Entrar em contato
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                  <Button asChild variant="outline" className="btn-secondary-institutional w-full sm:w-auto rounded-xl">
+                  <Link href="#contato">Falar com a equipe</Link>
+                </Button>
+              </div>
             </div>
           </motion.div>
         </div>
