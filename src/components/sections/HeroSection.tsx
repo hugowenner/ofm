@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
@@ -28,11 +29,13 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-8"
             >
-              <div className="inline-flex items-center justify-center w-24 h-24 md:w-28 md:h-28 rounded-full bg-franciscan-habit shadow-[0_20px_40px_-28px_rgba(43,30,18,0.95)]">
-                <span className="text-5xl md:text-7xl font-serif font-bold text-franciscan-cord">
-                  τ
-                </span>
-              </div>
+              <Image
+                src="/logo02.png"
+                alt="OFM - Província Santa Cruz"
+                width={160}
+                height={160}
+                className="mx-auto h-32 w-32 md:h-36 md:w-54 object-contain"
+              />
             </motion.div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-franciscan-habit mb-6 text-balance leading-[1.08]">

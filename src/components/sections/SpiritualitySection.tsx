@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 import { spiritualityContent } from "@/content/mockData";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -69,11 +70,13 @@ export function SpiritualitySection() {
             >
               <div className="absolute inset-0 bg-linear-to-b from-[rgba(255,255,255,0.06)] via-[rgba(74,55,40,0.55)] to-[rgba(43,30,20,0.88)]" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(196,163,90,0.25),transparent_45%)]" />
-              <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                <span className="text-[200px] font-serif font-bold text-franciscan-cream">
-                  τ
-                </span>
-              </div>
+              <Image
+                src="/logo02.png"
+                alt="Frades Menores - Província Santa Cruz"
+                width={192}
+                height={192}
+                className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 md:h-28 md:w-28 object-contain opacity-10 pointer-events-none"
+              />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-franciscan-cream">
                 <p className="text-[11px] tracking-[0.15em] uppercase font-semibold text-franciscan-sand mb-2">
                   Destaque

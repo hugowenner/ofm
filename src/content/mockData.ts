@@ -32,17 +32,19 @@ export const navigation = {
 };
 
 export const heroContent = {
-  title: "Perto das pessoas, no caminho de Francisco",
-  subtitle: "Frades Menores · Província Santa Cruz",
-  description: `Somos uma fraternidade em movimento. Vivemos a fé com simplicidade, 
-    escuta e presença real. Caminhamos com o povo. Servimos nas comunidades. 
-    E buscamos viver o Evangelho no ritmo da vida concreta.`,
+  title: "Perto das pessoas. No caminho de Francisco.",
+  subtitle: "OFM · Província Santa Cruz",
+  description: `Somos a OFM, Ordem dos Frades Menores.
+
+Vivemos o Evangelho com simplicidade, em fraternidade e próximos das pessoas.
+
+Especialmente onde a vida pede mais cuidado, escuta e presença.`,
   cta: {
     primary: { text: "Conhecer nossa história", href: "#provincia-santa-cruz" },
     secondary: { text: "Nossa vida franciscana", href: "#provincia-santa-cruz" },
   },
   quote: {
-    text: "Começamos pequenos, mas não queremos viver longe de ninguém.",
+    text: "Comecemos, irmãos, a servir ao Senhor.",
     author: "Francisco de Assis",
   },
 };

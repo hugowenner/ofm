@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -22,34 +23,38 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-(--franciscan-cream)/84 backdrop-blur-md border-b border-[color-mix(in_srgb,var(--franciscan-sand)_60%,white_40%)] shadow-[0_14px_34px_-30px_rgba(42,29,19,0.95)]"
+          ? "bg-(--franciscan-cream)/84 backdrop-blur-md shadow-[0_14px_34px_-30px_rgba(42,29,19,0.95)]"
           : "bg-transparent"
       }`}
     >
       <nav className="container-franciscan">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 flex items-center justify-center bg-franciscan-habit rounded-2xl border border-[color-mix(in_srgb,var(--franciscan-clay)_42%,var(--franciscan-earth)_58%)] shadow-[0_15px_30px_-26px_rgba(41,27,16,0.95)]">
-              <span className="text-3xl font-serif font-bold text-franciscan-cord">
-                τ
-              </span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-lg font-bold leading-tight text-franciscan-habit">
-                Frades Menores
-              </span>
-              <span className="text-[11px] uppercase tracking-[0.11em] font-semibold text-franciscan-stone">
-                Província Santa Cruz
-              </span>
-            </div>
-          </Link>
+          <Link href="/" className="flex items-center gap-3.5 group">
+  <Image
+    src="/logo02.png"
+    alt="OFM - Província Santa Cruz"
+    width={64}
+    height={64}
+    className="h-12 w-12 md:h-14 md:w-14 object-contain shrink-0"
+  />
+
+  <div className="flex flex-col leading-tight">
+    <span className="font-serif text-xl md:text-2xl font-bold text-franciscan-habit">
+      OFM
+    </span>
+
+    <span className="text-[11px] md:text-xs uppercase tracking-[0.11em] font-semibold text-muted">
+      Província Santa Cruz
+    </span>
+  </div>
+</Link>
 
           <div className="hidden md:flex items-center gap-1.5">
             {navigation.main.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="link-micro px-3.5 py-2 text-sm font-medium tracking-[0.01em] text-franciscan-earth hover:text-franciscan-habit rounded-xl"
+                className="link-micro px-4 py-2 text-base font-bold tracking-[0.01em] text-franciscan-earth hover:text-franciscan-habit rounded-xl transition-colors"
               >
                 {item.name}
               </Link>
